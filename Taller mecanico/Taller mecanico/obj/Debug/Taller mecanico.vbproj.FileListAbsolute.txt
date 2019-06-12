@@ -1,0 +1,21 @@
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\Taller mecanico.exe.config
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\Taller mecanico.exe
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\Taller mecanico.pdb
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\Taller mecanico.xml
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbprojResolveAssemblyReference.cache
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Clientes.resources
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Resources.resources
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbproj.GenerateResource.Cache
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.exe
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.xml
+c:\users\jorge silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.pdb
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Agenda.resources
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Facturacion.resources
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Login.resources
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Home.resources
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Historial_y_Seguimiento.resources
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Inventario.resources
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\MySql.Data.dll
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\Google.Protobuf.dll
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\MySql.Data.xml
