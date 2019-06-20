@@ -19,3 +19,7 @@ C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Talle
 C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\Google.Protobuf.dll
 C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Jorge Silva\documents\visual studio 2015\Projects\Taller mecanico\Taller mecanico\bin\Debug\MySql.Data.xml
+C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Debug\Taller mecanico.exe.config
+C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.exe
+C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.xml
+C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.pdb
