@@ -29,19 +29,32 @@ Partial Class Clientes
         Me.InventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistorialYSeguimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Txt11 = New System.Windows.Forms.TextBox()
+        Me.Txt10 = New System.Windows.Forms.TextBox()
+        Me.Txt9 = New System.Windows.Forms.TextBox()
+        Me.Txt8 = New System.Windows.Forms.TextBox()
+        Me.Txt7 = New System.Windows.Forms.TextBox()
+        Me.Txt6 = New System.Windows.Forms.TextBox()
+        Me.Txt5 = New System.Windows.Forms.TextBox()
+        Me.Txt4 = New System.Windows.Forms.TextBox()
+        Me.Txt3 = New System.Windows.Forms.TextBox()
+        Me.Txt2 = New System.Windows.Forms.TextBox()
+        Me.Txt1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -55,27 +68,14 @@ Partial Class Clientes
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.MenuStrip1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -117,29 +117,151 @@ Partial Class Clientes
         Me.FacturacionToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
         Me.FacturacionToolStripMenuItem.Text = "Facturacion "
         '
-        'TabControl1
+        'PictureBox1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(13, 105)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(750, 425)
-        Me.TabControl1.TabIndex = 2
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(17, 28)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(118, 71)
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(369, 544)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Grabar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(451, 544)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Eliminar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(544, 544)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Cancelar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(636, 544)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 7
+        Me.Button4.Text = "Salir"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Button5)
+        Me.TabPage2.Controls.Add(Me.TextBox12)
+        Me.TabPage2.Controls.Add(Me.TextBox13)
+        Me.TabPage2.Controls.Add(Me.TextBox14)
+        Me.TabPage2.Controls.Add(Me.Label13)
+        Me.TabPage2.Controls.Add(Me.Label14)
+        Me.TabPage2.Controls.Add(Me.Label15)
+        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(742, 456)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Consulta "
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(375, 81)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 35
+        Me.Button5.Text = "Buscar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(92, 80)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox12.TabIndex = 34
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(92, 55)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox13.TabIndex = 33
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(92, 28)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(510, 20)
+        Me.TextBox14.TabIndex = 32
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(12, 81)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(50, 16)
+        Me.Label13.TabIndex = 31
+        Me.Label13.Text = "Placas"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(12, 55)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(35, 16)
+        Me.Label14.TabIndex = 30
+        Me.Label14.Text = "RFC"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(9, 28)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(57, 16)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "Nombre"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 206)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(736, 190)
+        Me.DataGridView2.TabIndex = 0
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.TextBox11)
-        Me.TabPage1.Controls.Add(Me.TextBox10)
-        Me.TabPage1.Controls.Add(Me.TextBox9)
-        Me.TabPage1.Controls.Add(Me.TextBox8)
-        Me.TabPage1.Controls.Add(Me.TextBox7)
-        Me.TabPage1.Controls.Add(Me.TextBox6)
-        Me.TabPage1.Controls.Add(Me.TextBox5)
-        Me.TabPage1.Controls.Add(Me.TextBox4)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.Txt11)
+        Me.TabPage1.Controls.Add(Me.Txt10)
+        Me.TabPage1.Controls.Add(Me.Txt9)
+        Me.TabPage1.Controls.Add(Me.Txt8)
+        Me.TabPage1.Controls.Add(Me.Txt7)
+        Me.TabPage1.Controls.Add(Me.Txt6)
+        Me.TabPage1.Controls.Add(Me.Txt5)
+        Me.TabPage1.Controls.Add(Me.Txt4)
+        Me.TabPage1.Controls.Add(Me.Txt3)
+        Me.TabPage1.Controls.Add(Me.Txt2)
+        Me.TabPage1.Controls.Add(Me.Txt1)
         Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label11)
@@ -156,87 +278,87 @@ Partial Class Clientes
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(742, 399)
+        Me.TabPage1.Size = New System.Drawing.Size(742, 456)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TextBox11
+        'Txt11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(571, 206)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox11.TabIndex = 36
+        Me.Txt11.Location = New System.Drawing.Point(571, 206)
+        Me.Txt11.Name = "Txt11"
+        Me.Txt11.Size = New System.Drawing.Size(122, 20)
+        Me.Txt11.TabIndex = 36
         '
-        'TextBox10
+        'Txt10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(409, 203)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 35
+        Me.Txt10.Location = New System.Drawing.Point(409, 203)
+        Me.Txt10.Name = "Txt10"
+        Me.Txt10.Size = New System.Drawing.Size(100, 20)
+        Me.Txt10.TabIndex = 35
         '
-        'TextBox9
+        'Txt9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(138, 200)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(205, 20)
-        Me.TextBox9.TabIndex = 34
+        Me.Txt9.Location = New System.Drawing.Point(138, 200)
+        Me.Txt9.Name = "Txt9"
+        Me.Txt9.Size = New System.Drawing.Size(205, 20)
+        Me.Txt9.TabIndex = 34
         '
-        'TextBox8
+        'Txt8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(88, 161)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(344, 20)
-        Me.TextBox8.TabIndex = 33
+        Me.Txt8.Location = New System.Drawing.Point(88, 161)
+        Me.Txt8.Name = "Txt8"
+        Me.Txt8.Size = New System.Drawing.Size(344, 20)
+        Me.Txt8.TabIndex = 33
         '
-        'TextBox7
+        'Txt7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(447, 124)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(263, 20)
-        Me.TextBox7.TabIndex = 32
+        Me.Txt7.Location = New System.Drawing.Point(447, 124)
+        Me.Txt7.Name = "Txt7"
+        Me.Txt7.Size = New System.Drawing.Size(263, 20)
+        Me.Txt7.TabIndex = 32
         '
-        'TextBox6
+        'Txt6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(88, 124)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(260, 20)
-        Me.TextBox6.TabIndex = 31
+        Me.Txt6.Location = New System.Drawing.Point(88, 124)
+        Me.Txt6.Name = "Txt6"
+        Me.Txt6.Size = New System.Drawing.Size(260, 20)
+        Me.Txt6.TabIndex = 31
         '
-        'TextBox5
+        'Txt5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(471, 98)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox5.TabIndex = 30
+        Me.Txt5.Location = New System.Drawing.Point(471, 98)
+        Me.Txt5.Name = "Txt5"
+        Me.Txt5.Size = New System.Drawing.Size(117, 20)
+        Me.Txt5.TabIndex = 30
         '
-        'TextBox4
+        'Txt4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(88, 95)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(260, 20)
-        Me.TextBox4.TabIndex = 29
+        Me.Txt4.Location = New System.Drawing.Point(88, 95)
+        Me.Txt4.Name = "Txt4"
+        Me.Txt4.Size = New System.Drawing.Size(260, 20)
+        Me.Txt4.TabIndex = 29
         '
-        'TextBox3
+        'Txt3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(88, 69)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(622, 20)
-        Me.TextBox3.TabIndex = 28
+        Me.Txt3.Location = New System.Drawing.Point(88, 69)
+        Me.Txt3.Name = "Txt3"
+        Me.Txt3.Size = New System.Drawing.Size(622, 20)
+        Me.Txt3.TabIndex = 28
         '
-        'TextBox2
+        'Txt2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(88, 44)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(212, 20)
-        Me.TextBox2.TabIndex = 27
+        Me.Txt2.Location = New System.Drawing.Point(88, 44)
+        Me.Txt2.Name = "Txt2"
+        Me.Txt2.Size = New System.Drawing.Size(212, 20)
+        Me.Txt2.TabIndex = 27
         '
-        'TextBox1
+        'Txt1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(88, 17)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(622, 20)
-        Me.TextBox1.TabIndex = 26
+        Me.Txt1.Location = New System.Drawing.Point(88, 17)
+        Me.Txt1.Name = "Txt1"
+        Me.Txt1.Size = New System.Drawing.Size(622, 20)
+        Me.Txt1.TabIndex = 26
         '
         'DataGridView1
         '
@@ -365,143 +487,21 @@ Partial Class Clientes
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Nombre"
         '
-        'TabPage2
+        'TabControl1
         '
-        Me.TabPage2.Controls.Add(Me.Button5)
-        Me.TabPage2.Controls.Add(Me.TextBox12)
-        Me.TabPage2.Controls.Add(Me.TextBox13)
-        Me.TabPage2.Controls.Add(Me.TextBox14)
-        Me.TabPage2.Controls.Add(Me.Label13)
-        Me.TabPage2.Controls.Add(Me.Label14)
-        Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(742, 399)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Consulta "
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(375, 81)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 35
-        Me.Button5.Text = "Buscar"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(92, 80)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox12.TabIndex = 34
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(92, 55)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox13.TabIndex = 33
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Location = New System.Drawing.Point(92, 28)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(510, 20)
-        Me.TextBox14.TabIndex = 32
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(12, 81)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(50, 16)
-        Me.Label13.TabIndex = 31
-        Me.Label13.Text = "Placas"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(12, 55)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(35, 16)
-        Me.Label14.TabIndex = 30
-        Me.Label14.Text = "RFC"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(9, 28)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(57, 16)
-        Me.Label15.TabIndex = 29
-        Me.Label15.Text = "Nombre"
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 206)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(736, 190)
-        Me.DataGridView2.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(17, 28)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(118, 71)
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(369, 544)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Grabar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(451, 544)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Eliminar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(544, 544)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Cancelar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(636, 544)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 7
-        Me.Button4.Text = "Salir"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 105)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(750, 482)
+        Me.TabControl1.TabIndex = 2
         '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(771, 579)
+        Me.ClientSize = New System.Drawing.Size(771, 599)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -513,14 +513,14 @@ Partial Class Clientes
         Me.Text = "Clientes"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -532,17 +532,32 @@ Partial Class Clientes
     Friend WithEvents InventarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistorialYSeguimientoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FacturacionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Button5 As Button
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents Txt11 As TextBox
+    Friend WithEvents Txt10 As TextBox
+    Friend WithEvents Txt9 As TextBox
+    Friend WithEvents Txt8 As TextBox
+    Friend WithEvents Txt7 As TextBox
+    Friend WithEvents Txt6 As TextBox
+    Friend WithEvents Txt5 As TextBox
+    Friend WithEvents Txt4 As TextBox
+    Friend WithEvents Txt3 As TextBox
+    Friend WithEvents Txt2 As TextBox
+    Friend WithEvents Txt1 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
@@ -556,20 +571,5 @@ Partial Class Clientes
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents TabControl1 As TabControl
 End Class

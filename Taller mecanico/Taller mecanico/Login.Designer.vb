@@ -35,15 +35,16 @@ Partial Class Login
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(163, 88)
+        Me.TextBox1.Location = New System.Drawing.Point(163, 53)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(147, 20)
         Me.TextBox1.TabIndex = 0
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(163, 50)
+        Me.TextBox2.Location = New System.Drawing.Point(163, 87)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(147, 20)
         Me.TextBox2.TabIndex = 1
         '
