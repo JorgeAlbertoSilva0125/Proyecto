@@ -1,4 +1,4 @@
-﻿
+﻿Imports Mysql.data.mysqlclient
 Public Class Clientes
     Dim comandos As New MySqlCommand
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
