@@ -1,4 +1,4 @@
-﻿
+﻿Imports MySql.Data.MySqlClient
 Public Class Login
     Dim adaptador As New MySqlDataAdapter
     Dim datos As New DataSet
