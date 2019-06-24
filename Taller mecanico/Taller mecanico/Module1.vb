@@ -3,7 +3,7 @@ Module modulo
 
     Public MysqlCommand As New MySqlCommand
     Public dread As MySqlDataReader
-    Dim MysqlConnString As String = "server='localhost'; user='root'; password=''; Database='taller_mecanico'"
+    Dim MysqlConnString As String = "server='localhost'; user='root'; password=''; Database='taller_mecanico1'"
 
     Public conexion As MySqlConnection = New MySqlConnection(MysqlConnString)
 

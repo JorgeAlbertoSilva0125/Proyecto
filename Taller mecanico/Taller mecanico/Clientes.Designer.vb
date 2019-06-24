@@ -42,7 +42,6 @@ Partial Class Clientes
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Txt11 = New System.Windows.Forms.TextBox()
         Me.Txt10 = New System.Windows.Forms.TextBox()
@@ -55,7 +54,6 @@ Partial Class Clientes
         Me.Txt3 = New System.Windows.Forms.TextBox()
         Me.Txt2 = New System.Windows.Forms.TextBox()
         Me.Txt1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -68,11 +66,11 @@ Partial Class Clientes
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -172,11 +170,10 @@ Partial Class Clientes
         Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.Label14)
         Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(742, 456)
+        Me.TabPage2.Size = New System.Drawing.Size(742, 234)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Consulta "
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -241,14 +238,6 @@ Partial Class Clientes
         Me.Label15.TabIndex = 29
         Me.Label15.Text = "Nombre"
         '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 206)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(736, 190)
-        Me.DataGridView2.TabIndex = 0
-        '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Txt11)
@@ -262,7 +251,6 @@ Partial Class Clientes
         Me.TabPage1.Controls.Add(Me.Txt3)
         Me.TabPage1.Controls.Add(Me.Txt2)
         Me.TabPage1.Controls.Add(Me.Txt1)
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.Label10)
@@ -278,7 +266,7 @@ Partial Class Clientes
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(742, 456)
+        Me.TabPage1.Size = New System.Drawing.Size(742, 234)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -359,14 +347,6 @@ Partial Class Clientes
         Me.Txt1.Name = "Txt1"
         Me.Txt1.Size = New System.Drawing.Size(622, 20)
         Me.Txt1.TabIndex = 26
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 229)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(732, 164)
-        Me.DataGridView1.TabIndex = 25
         '
         'Label12
         '
@@ -487,6 +467,14 @@ Partial Class Clientes
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Nombre"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 367)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(742, 164)
+        Me.DataGridView1.TabIndex = 25
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -494,7 +482,7 @@ Partial Class Clientes
         Me.TabControl1.Location = New System.Drawing.Point(12, 105)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(750, 482)
+        Me.TabControl1.Size = New System.Drawing.Size(750, 260)
         Me.TabControl1.TabIndex = 2
         '
         'Clientes
@@ -509,6 +497,7 @@ Partial Class Clientes
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Clientes"
         Me.Text = "Clientes"
         Me.MenuStrip1.ResumeLayout(False)
@@ -516,7 +505,6 @@ Partial Class Clientes
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -545,7 +533,6 @@ Partial Class Clientes
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Txt11 As TextBox
     Friend WithEvents Txt10 As TextBox

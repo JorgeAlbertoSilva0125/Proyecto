@@ -1,9 +1,11 @@
 ﻿Imports Mysql.data.mysqlclient
 Public Class Clientes
     Dim comandos As New MySqlCommand
+    Dim adaptador As New MySqlDataAdapter
+    Dim datos As New DataSet
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'conectamos la base de datos 
-        'conexion.ConnectionString = "server='localhost'; user='root'; password=''; Database='taller_mecanico'"
+        ' conexion.ConnectionString = "server='localhost'; user='root'; password=''; Database='taller_mecanico1'"
         ' Conectarse()
     End Sub
 
@@ -11,8 +13,8 @@ Public Class Clientes
 
         Try
             comandos = New MySqlCommand("INSERT INTO clientes(id_cliente,nombre,RFC,direccion,telefono,municipio,CP,email,estado,marca_vehiculo,modelo_vehiculo,placas)" & Chr(13) &
-                                        "VALUES(@id_cliente,@nombre,@RFC,@direccion,@telefono,@municipio,@CP,@email,@estado,@marca_vehiculo,@modelo_vehiculo,@placas)", conexion)
-            'comandos.Parameters.AddWithValue("@id_cliente", Txt12.Text)
+                                        "VALUES('',@nombre,@RFC,@direccion,@telefono,@municipio,@CP,@email,@estado,@marca_vehiculo,@modelo_vehiculo,@placas)", conexion)
+
             comandos.Parameters.AddWithValue("@nombre", Txt1.Text)
             comandos.Parameters.AddWithValue("@RFC", Txt2.Text)
             comandos.Parameters.AddWithValue("@direccion", Txt3.Text)
@@ -26,6 +28,18 @@ Public Class Clientes
             comandos.Parameters.AddWithValue("@placas", Txt11.Text)
             comandos.ExecuteNonQuery()
             MsgBox("Datos guardados")
+            '  Txt1.Text = ""
+            'Txt2.Text = ""
+            'Txt3.Text = ""
+            'Txt4.Text = ""
+            'Txt5.Text = ""
+            'Txt6.Text = ""
+            'Txt7.Text = ""
+            'Txt8.Text = ""
+            'Txt9.Text = ""
+            'Txt10.Text = ""
+            'Txt11.Text = ""'
+
 
         Catch ex As Exception
 
@@ -34,5 +48,52 @@ Public Class Clientes
 
 
         End Try
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Dim consulta As String
+        Dim lista As Byte
+
+        If TextBox14.Text <> "" Then
+                consulta = "SELECT * FROM clientes WHERE nombre ='" & TextBox14.Text & "'"
+                adaptador = New MySqlDataAdapter(consulta, conexion)
+                datos = New DataSet
+                adaptador.Fill(datos, "clientes")
+            lista = datos.Tables("clientes").Rows.Count
+
+            If lista <> 0 Then
+                    'TextBox13.Text = datos.Tables("clientes").Rows(0).Item("RFC")
+                    'TextBox12.Text = datos.Tables("clientes").Rows(0).Item("placas")
+                    DataGridView1.DataSource = datos.Tables("clientes")
+                    DataGridView1.DataSource = "clientes"
+                Else
+                    MsgBox("datos no encontrados")
+
+                End If
+
+            End If
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim eliminar As String
+        Dim si As Byte
+        si = MsgBox("¿Desea eliminar?", vbYesNo, "Eliminar")
+        If si = 6 Then
+            eliminar = "DELETE FROM clientes WHERE nombre='" & TextBox14.Text & "'"
+            comandos = New MySqlCommand(eliminar, conexion)
+            comandos.ExecuteNonQuery()
+            MsgBox("Eliminado")
+            TextBox14.Clear()
+            TextBox13.Clear()
+            TextBox12.Clear()
+
+        End If
+
     End Sub
 End Class

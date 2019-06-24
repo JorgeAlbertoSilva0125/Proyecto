@@ -9,7 +9,7 @@ Public Class Login
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'conectamos la base de datos de contraseña y usuarios
         'conexion.ConnectionString = "server='localhost'; user='root'; password=''; Database='taller_mecanico'"
-        ' Conectarse()
+        Conectarse()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         'Cerrar la ventana de logeo 
