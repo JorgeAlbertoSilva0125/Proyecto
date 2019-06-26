@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Module modulo
-
+    Dim adaptador As New MySqlDataAdapter
     Public MysqlCommand As New MySqlCommand
     Public dread As MySqlDataReader
     Dim MysqlConnString As String = "server='localhost'; user='root'; password=''; Database='taller_mecanico1'"
@@ -30,7 +30,13 @@ Module modulo
     'End Try
 
 
+    Sub consultaclientes(ByVal tabla As DataGridView)
+        adaptador = New MySqlDataAdapter("SELECT * FROM clientes", conexion)
+        Dim data As New DataSet
+        adaptador.Fill(data, "clientes")
+        tabla.DataSource = data.Tables("clientes")
 
+    End Sub
 
 End Module
 

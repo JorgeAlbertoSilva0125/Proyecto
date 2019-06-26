@@ -1,4 +1,6 @@
-﻿Imports Mysql.data.mysqlclient
+﻿Imports MySql.Data
+Imports MySql.Data.Types
+Imports MySql.Data.MySqlClient
 Public Class Clientes
     Dim comandos As New MySqlCommand
     Dim adaptador As New MySqlDataAdapter
@@ -10,11 +12,10 @@ Public Class Clientes
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-
-        Try
-            comandos = New MySqlCommand("INSERT INTO clientes(id_cliente,nombre,RFC,direccion,telefono,municipio,CP,email,estado,marca_vehiculo,modelo_vehiculo,placas)" & Chr(13) &
-                                        "VALUES('',@nombre,@RFC,@direccion,@telefono,@municipio,@CP,@email,@estado,@marca_vehiculo,@modelo_vehiculo,@placas)", conexion)
-
+        'Codigo para insertar 
+        comandos = New MySqlCommand("INSERT INTO clientes(id_cliente,nombre,RFC,direccion,telefono,municipio,CP,email,estado,marca_vehiculo,modelo_vehiculo,placas)" & Chr(13) &
+                                      "VALUES('',@nombre,@RFC,@direccion,@telefono,@municipio,@CP,@email,@estado,@marca_vehiculo,@modelo_vehiculo,@placas)", conexion)
+        If Txt1.Text <> "" Then
             comandos.Parameters.AddWithValue("@nombre", Txt1.Text)
             comandos.Parameters.AddWithValue("@RFC", Txt2.Text)
             comandos.Parameters.AddWithValue("@direccion", Txt3.Text)
@@ -28,59 +29,65 @@ Public Class Clientes
             comandos.Parameters.AddWithValue("@placas", Txt11.Text)
             comandos.ExecuteNonQuery()
             MsgBox("Datos guardados")
-            '  Txt1.Text = ""
-            'Txt2.Text = ""
-            'Txt3.Text = ""
-            'Txt4.Text = ""
-            'Txt5.Text = ""
-            'Txt6.Text = ""
-            'Txt7.Text = ""
-            'Txt8.Text = ""
-            'Txt9.Text = ""
-            'Txt10.Text = ""
-            'Txt11.Text = ""'
 
 
-        Catch ex As Exception
 
+        Else
+            Txt1.Text = ""
+            Txt2.Text = ""
+            Txt3.Text = ""
+            Txt4.Text = ""
+            Txt5.Text = ""
+            Txt6.Text = ""
+            Txt7.Text = ""
+            Txt8.Text = ""
+            Txt9.Text = ""
+            Txt10.Text = ""
+            Txt11.Text = ""
             MsgBox("Error al registar cliente")
 
 
+        End If
 
-        End Try
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'Cerrar form clientes 
         Me.Close()
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        'Consulta tabla clientes 
         Dim consulta As String
         Dim lista As Byte
 
+        consultaclientes(DataGridView1)
+
         If TextBox14.Text <> "" Then
-                consulta = "SELECT * FROM clientes WHERE nombre ='" & TextBox14.Text & "'"
-                adaptador = New MySqlDataAdapter(consulta, conexion)
-                datos = New DataSet
-                adaptador.Fill(datos, "clientes")
+
+            consulta = "SELECT * FROM clientes WHERE nombre ='" & TextBox14.Text & "'"
+            adaptador = New MySqlDataAdapter(consulta, conexion)
+            datos = New DataSet
+            adaptador.Fill(datos, "clientes")
             lista = datos.Tables("clientes").Rows.Count
 
             If lista <> 0 Then
-                    'TextBox13.Text = datos.Tables("clientes").Rows(0).Item("RFC")
-                    'TextBox12.Text = datos.Tables("clientes").Rows(0).Item("placas")
-                    DataGridView1.DataSource = datos.Tables("clientes")
-                    DataGridView1.DataSource = "clientes"
-                Else
-                    MsgBox("datos no encontrados")
-
-                End If
+                'TextBox13.Text = datos.Tables("clientes").Rows(0).Item("RFC")
+                'TextBox12.Text = datos.Tables("clientes").Rows(0).Item("placas")
+                DataGridView1.DataSource = datos
+                DataGridView1.DataMember = "clientes"
+            Else
+                MsgBox("datos no encontrados")
 
             End If
+
+        End If
 
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'Codigo para eliminar 
         Dim eliminar As String
         Dim si As Byte
         si = MsgBox("¿Desea eliminar?", vbYesNo, "Eliminar")
@@ -95,5 +102,25 @@ Public Class Clientes
 
         End If
 
+    End Sub
+
+    Private Sub HistorialYSeguimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialYSeguimientoToolStripMenuItem.Click
+        Historial_y_Seguimiento.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub AgendaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgendaToolStripMenuItem.Click
+        Agenda.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub InventarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioToolStripMenuItem.Click
+        Inventario.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub FacturacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturacionToolStripMenuItem.Click
+        Facturacion.Show()
+        Me.Close()
     End Sub
 End Class
