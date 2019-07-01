@@ -13,6 +13,8 @@ Public Class Clientes
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         'Codigo para insertar 
+
+
         comandos = New MySqlCommand("INSERT INTO clientes(id_cliente,nombre,RFC,direccion,telefono,municipio,CP,email,estado,marca_vehiculo,modelo_vehiculo,placas)" & Chr(13) &
                                       "VALUES('',@nombre,@RFC,@direccion,@telefono,@municipio,@CP,@email,@estado,@marca_vehiculo,@modelo_vehiculo,@placas)", conexion)
         If Txt1.Text <> "" Then
@@ -33,6 +35,7 @@ Public Class Clientes
 
 
         Else
+
             Txt1.Text = ""
             Txt2.Text = ""
             Txt3.Text = ""
@@ -45,9 +48,8 @@ Public Class Clientes
             Txt10.Text = ""
             Txt11.Text = ""
             MsgBox("Error al registar cliente")
-
-
         End If
+
 
     End Sub
 
@@ -65,8 +67,8 @@ Public Class Clientes
 
         If TextBox14.Text <> "" Then
 
-            consulta = "SELECT * FROM clientes WHERE nombre ='" & TextBox14.Text & "'"
-            adaptador = New MySqlDataAdapter(consulta, conexion)
+            consulta = "Select * FROM clientes WHERE nombre ='" & TextBox14.Text & "'"
+                adaptador = New MySqlDataAdapter(consulta, conexion)
             datos = New DataSet
             adaptador.Fill(datos, "clientes")
             lista = datos.Tables("clientes").Rows.Count
@@ -122,5 +124,26 @@ Public Class Clientes
     Private Sub FacturacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturacionToolStripMenuItem.Click
         Facturacion.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim actualizar As String
+
+        actualizar = "UPDATE clientes SET nombre=@nombre, RFC=@RFC ,direccion=@direccion ,telefono=@telefono ,municipio=@municipio ,CP=@CP ,email=@email ,estado=@estado ,marca_vehiculo=@marca_vehiculo ,modelo_vehiculo=@modelo_vehiculo ,placas=@placas WHERE nombre=@nombre "
+        comandos = New MySqlCommand(actualizar, conexion)
+
+        comandos.Parameters.AddWithValue("@nombre", Txt1.Text)
+        comandos.Parameters.AddWithValue("@RFC", Txt2.Text)
+        comandos.Parameters.AddWithValue("@direccion", Txt3.Text)
+        comandos.Parameters.AddWithValue("@telefono", Txt4.Text)
+        comandos.Parameters.AddWithValue("@municipio", Txt6.Text)
+        comandos.Parameters.AddWithValue("@CP", Txt5.Text)
+        comandos.Parameters.AddWithValue("@email", Txt8.Text)
+        comandos.Parameters.AddWithValue("@estado", Txt7.Text)
+        comandos.Parameters.AddWithValue("@marca_vehiculo", Txt9.Text)
+        comandos.Parameters.AddWithValue("@modelo_vehiculo", Txt10.Text)
+        comandos.Parameters.AddWithValue("@placas", Txt11.Text)
+        comandos.ExecuteNonQuery()
+        MsgBox("Los Datos se han actualizado ")
     End Sub
 End Class
