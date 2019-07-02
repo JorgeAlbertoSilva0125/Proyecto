@@ -31,7 +31,17 @@ Public Class Clientes
             comandos.Parameters.AddWithValue("@placas", Txt11.Text)
             comandos.ExecuteNonQuery()
             MsgBox("Datos guardados")
-
+            Txt1.Clear()
+            Txt2.Clear()
+            Txt3.Clear()
+            Txt4.Clear()
+            Txt5.Clear()
+            Txt6.Clear()
+            Txt7.Clear()
+            Txt8.Clear()
+            Txt9.Clear()
+            Txt10.Clear()
+            Txt11.Clear()
 
 
         Else
@@ -68,7 +78,7 @@ Public Class Clientes
         If TextBox14.Text <> "" Then
 
             consulta = "Select * FROM clientes WHERE nombre ='" & TextBox14.Text & "'"
-                adaptador = New MySqlDataAdapter(consulta, conexion)
+            adaptador = New MySqlDataAdapter(consulta, conexion)
             datos = New DataSet
             adaptador.Fill(datos, "clientes")
             lista = datos.Tables("clientes").Rows.Count
@@ -128,23 +138,40 @@ Public Class Clientes
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim actualizar As String
-
-        actualizar = "UPDATE clientes SET nombre=@nombre, RFC=@RFC ,direccion=@direccion ,telefono=@telefono ,municipio=@municipio ,CP=@CP ,email=@email ,estado=@estado ,marca_vehiculo=@marca_vehiculo ,modelo_vehiculo=@modelo_vehiculo ,placas=@placas WHERE nombre=@nombre "
-        comandos = New MySqlCommand(actualizar, conexion)
-
-        comandos.Parameters.AddWithValue("@nombre", Txt1.Text)
-        comandos.Parameters.AddWithValue("@RFC", Txt2.Text)
-        comandos.Parameters.AddWithValue("@direccion", Txt3.Text)
-        comandos.Parameters.AddWithValue("@telefono", Txt4.Text)
-        comandos.Parameters.AddWithValue("@municipio", Txt6.Text)
-        comandos.Parameters.AddWithValue("@CP", Txt5.Text)
-        comandos.Parameters.AddWithValue("@email", Txt8.Text)
-        comandos.Parameters.AddWithValue("@estado", Txt7.Text)
-        comandos.Parameters.AddWithValue("@marca_vehiculo", Txt9.Text)
-        comandos.Parameters.AddWithValue("@modelo_vehiculo", Txt10.Text)
-        comandos.Parameters.AddWithValue("@placas", Txt11.Text)
-        comandos.ExecuteNonQuery()
-        MsgBox("Los Datos se han actualizado ")
+        Try
+            actualizar = "UPDATE clientes SET nombre='" & Txt1.Text & "', RFC='" & Txt2.Text & "' ,direccion='" & Txt3.Text & "',telefono='" & Txt4.Text & "' ,municipio='" & Txt6.Text & "' ,CP='" & Txt5.Text & "',email= '" & Txt8.Text & "' ,estado='" & Txt7.Text & "' ,marca_vehiculo='" & Txt9.Text & "' ,modelo_vehiculo='" & Txt10.Text & "' ,placas= '" & Txt11.Text & "' WHERE nombre='" & TextBox14.Text & "'"
+            comandos = New MySqlCommand(actualizar, conexion)
+            comandos.ExecuteNonQuery()
+            MsgBox("Los Datos se han actualizado con exito ")
+            Txt1.Clear()
+            Txt2.Clear()
+            Txt3.Clear()
+            Txt4.Clear()
+            Txt5.Clear()
+            Txt6.Clear()
+            Txt7.Clear()
+            Txt8.Clear()
+            Txt9.Clear()
+            Txt10.Clear()
+            Txt11.Clear()
+        Catch ex As Exception
+            MsgBox("Los datos no se actualizaron")
+        End Try
     End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        Txt1.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
+        Txt2.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
+        Txt3.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)
+        Txt4.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
+        Txt5.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
+        Txt6.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString)
+        Txt7.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(8).Value.ToString)
+        Txt8.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(7).Value.ToString)
+        Txt9.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(9).Value.ToString)
+        Txt10.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(10).Value.ToString)
+        Txt11.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(11).Value.ToString)
+
+
+    End Sub
 End Class

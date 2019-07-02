@@ -30,7 +30,6 @@ C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Debug\Google.Protobuf.dll
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Debug\MySql.Data.xml
-C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbprojResolveAssemblyReference.cache
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Agenda.resources
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Facturacion.resources
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Login.resources
@@ -40,3 +39,6 @@ C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Inventario.resources
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.Resources.resources
 C:\Users\Jorge Silva\Source\Repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbproj.GenerateResource.Cache
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbprojAssemblyReference.cache
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbproj.CoreCompileInputs.cache
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbproj.CopyComplete
