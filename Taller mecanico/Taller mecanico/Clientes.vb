@@ -137,6 +137,7 @@ Public Class Clientes
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'codigo para actualizar registros 
         Dim actualizar As String
         Try
             actualizar = "UPDATE clientes SET nombre='" & Txt1.Text & "', RFC='" & Txt2.Text & "' ,direccion='" & Txt3.Text & "',telefono='" & Txt4.Text & "' ,municipio='" & Txt6.Text & "' ,CP='" & Txt5.Text & "',email= '" & Txt8.Text & "' ,estado='" & Txt7.Text & "' ,marca_vehiculo='" & Txt9.Text & "' ,modelo_vehiculo='" & Txt10.Text & "' ,placas= '" & Txt11.Text & "' WHERE nombre='" & TextBox14.Text & "'"
@@ -160,6 +161,7 @@ Public Class Clientes
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        ' Mostrar datos de datadridview en los texbox correspondientes 
         Txt1.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
         Txt2.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
         Txt3.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)

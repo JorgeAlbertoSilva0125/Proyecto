@@ -213,7 +213,7 @@ Partial Class Facturacion
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(75, 23)
         Me.Button6.TabIndex = 16
-        Me.Button6.Text = "Facturar"
+        Me.Button6.Text = "Buscar"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'TextBox10

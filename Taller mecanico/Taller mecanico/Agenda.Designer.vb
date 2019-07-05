@@ -26,25 +26,24 @@ Partial Class Agenda
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,11 +54,12 @@ Partial Class Agenda
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.calendario = New System.Windows.Forms.MonthCalendar()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -85,8 +85,8 @@ Partial Class Agenda
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.DateTimePicker1)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
+        Me.TabPage1.Controls.Add(Me.ListBox1)
+        Me.TabPage1.Controls.Add(Me.MonthCalendar1)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Button6)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
@@ -105,20 +105,20 @@ Partial Class Agenda
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
+        'ListBox1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(505, 19)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(187, 20)
-        Me.DateTimePicker1.TabIndex = 41
+        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(88, 69)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(291, 117)
+        Me.ListBox1.TabIndex = 42
         '
-        'TextBox2
+        'MonthCalendar1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(88, 69)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(291, 82)
-        Me.TextBox2.TabIndex = 40
+        Me.MonthCalendar1.Location = New System.Drawing.Point(478, 9)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 41
         '
         'Label2
         '
@@ -166,14 +166,6 @@ Partial Class Agenda
         Me.TextBox1.Size = New System.Drawing.Size(291, 20)
         Me.TextBox1.TabIndex = 26
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 348)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(742, 164)
-        Me.DataGridView1.TabIndex = 25
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -215,7 +207,7 @@ Partial Class Agenda
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage2.Controls.Add(Me.calendario)
         Me.TabPage2.Controls.Add(Me.Button5)
         Me.TabPage2.Controls.Add(Me.TextBox14)
         Me.TabPage2.Controls.Add(Me.Label14)
@@ -223,17 +215,10 @@ Partial Class Agenda
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(742, 399)
+        Me.TabPage2.Size = New System.Drawing.Size(742, 218)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Consulta "
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(92, 66)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker2.TabIndex = 36
         '
         'Button5
         '
@@ -270,6 +255,14 @@ Partial Class Agenda
         Me.Label15.Size = New System.Drawing.Size(57, 16)
         Me.Label15.TabIndex = 29
         Me.Label15.Text = "Nombre"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(17, 348)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(742, 164)
+        Me.DataGridView1.TabIndex = 25
         '
         'MenuStrip1
         '
@@ -346,6 +339,12 @@ Partial Class Agenda
         Me.Button1.Text = "Grabar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'calendario
+        '
+        Me.calendario.Location = New System.Drawing.Point(92, 50)
+        Me.calendario.Name = "calendario"
+        Me.calendario.TabIndex = 36
+        '
         'Agenda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -365,9 +364,9 @@ Partial Class Agenda
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -402,9 +401,9 @@ Partial Class Agenda
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button6 As Button
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents calendario As MonthCalendar
 End Class

@@ -38,5 +38,14 @@ Module modulo
 
     End Sub
 
+
+    Sub consultagenda(ByVal tabla As DataGridView)
+        adaptador = New MySqlDataAdapter("SELECT * FROM agenda", conexion)
+        Dim data As New DataSet
+        adaptador.Fill(data, "agenda")
+        tabla.DataSource = data.Tables("agenda")
+
+    End Sub
+
 End Module
 

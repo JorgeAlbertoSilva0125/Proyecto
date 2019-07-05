@@ -285,7 +285,7 @@ Partial Class Historial_y_Seguimiento
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(742, 195)
+        Me.TabPage2.Size = New System.Drawing.Size(742, 189)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Consulta "
         Me.TabPage2.UseVisualStyleBackColor = True
