@@ -27,12 +27,11 @@ Partial Class Agenda
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -54,7 +53,8 @@ Partial Class Agenda
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.calendario = New System.Windows.Forms.MonthCalendar()
+        Me.Calendar = New System.Windows.Forms.DateTimePicker()
+        Me.Calendar_Consul = New System.Windows.Forms.DateTimePicker()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -85,13 +85,13 @@ Partial Class Agenda
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Calendar)
         Me.TabPage1.Controls.Add(Me.ListBox1)
-        Me.TabPage1.Controls.Add(Me.MonthCalendar1)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Button6)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
-        Me.TabPage1.Controls.Add(Me.TextBox7)
-        Me.TabPage1.Controls.Add(Me.TextBox6)
+        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.TextBox2)
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label7)
@@ -113,12 +113,6 @@ Partial Class Agenda
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(291, 117)
         Me.ListBox1.TabIndex = 42
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(478, 9)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 41
         '
         'Label2
         '
@@ -145,19 +139,19 @@ Partial Class Agenda
         Me.ComboBox1.Size = New System.Drawing.Size(291, 21)
         Me.ComboBox1.TabIndex = 37
         '
-        'TextBox7
+        'TextBox3
         '
-        Me.TextBox7.Location = New System.Drawing.Point(505, 187)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(93, 20)
-        Me.TextBox7.TabIndex = 32
+        Me.TextBox3.Location = New System.Drawing.Point(505, 187)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox3.TabIndex = 32
         '
-        'TextBox6
+        'TextBox2
         '
-        Me.TextBox6.Location = New System.Drawing.Point(143, 188)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(260, 20)
-        Me.TextBox6.TabIndex = 31
+        Me.TextBox2.Location = New System.Drawing.Point(143, 188)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(260, 20)
+        Me.TextBox2.TabIndex = 31
         '
         'TextBox1
         '
@@ -207,7 +201,7 @@ Partial Class Agenda
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.calendario)
+        Me.TabPage2.Controls.Add(Me.Calendar_Consul)
         Me.TabPage2.Controls.Add(Me.Button5)
         Me.TabPage2.Controls.Add(Me.TextBox14)
         Me.TabPage2.Controls.Add(Me.Label14)
@@ -339,11 +333,21 @@ Partial Class Agenda
         Me.Button1.Text = "Grabar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'calendario
+        'Calendar
         '
-        Me.calendario.Location = New System.Drawing.Point(92, 50)
-        Me.calendario.Name = "calendario"
-        Me.calendario.TabIndex = 36
+        Me.Calendar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.Calendar.Location = New System.Drawing.Point(523, 20)
+        Me.Calendar.Name = "Calendar"
+        Me.Calendar.Size = New System.Drawing.Size(93, 20)
+        Me.Calendar.TabIndex = 43
+        '
+        'Calendar_Consul
+        '
+        Me.Calendar_Consul.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.Calendar_Consul.Location = New System.Drawing.Point(92, 70)
+        Me.Calendar_Consul.Name = "Calendar_Consul"
+        Me.Calendar_Consul.Size = New System.Drawing.Size(93, 20)
+        Me.Calendar_Consul.TabIndex = 44
         '
         'Agenda
         '
@@ -377,8 +381,8 @@ Partial Class Agenda
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label10 As Label
@@ -403,7 +407,7 @@ Partial Class Agenda
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Button6 As Button
-    Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents calendario As MonthCalendar
+    Friend WithEvents Calendar As DateTimePicker
+    Friend WithEvents Calendar_Consul As DateTimePicker
 End Class

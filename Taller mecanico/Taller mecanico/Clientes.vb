@@ -176,4 +176,26 @@ Public Class Clientes
 
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        If MsgBox("Desea cancelar el registro", vbQuestion + vbYesNo) = vbYes Then
+
+            Txt1.Clear()
+            Txt2.Clear()
+            Txt3.Clear()
+            Txt4.Clear()
+            Txt5.Clear()
+            Txt6.Clear()
+            Txt7.Clear()
+            Txt8.Clear()
+            Txt9.Clear()
+            Txt10.Clear()
+            Txt11.Clear()
+
+        End If
+
+
+
+    End Sub
 End Class
