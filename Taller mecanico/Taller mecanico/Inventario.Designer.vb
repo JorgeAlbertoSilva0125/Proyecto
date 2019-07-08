@@ -53,7 +53,6 @@ Partial Class Inventario
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +68,6 @@ Partial Class Inventario
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,7 +88,7 @@ Partial Class Inventario
         Me.TabControl1.Location = New System.Drawing.Point(13, 108)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(750, 429)
+        Me.TabControl1.Size = New System.Drawing.Size(750, 230)
         Me.TabControl1.TabIndex = 5
         '
         'TabPage1
@@ -105,7 +103,6 @@ Partial Class Inventario
         Me.TabPage1.Controls.Add(Me.TextBox4)
         Me.TabPage1.Controls.Add(Me.TextBox3)
         Me.TabPage1.Controls.Add(Me.TextBox1)
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -119,7 +116,7 @@ Partial Class Inventario
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(742, 403)
+        Me.TabPage1.Size = New System.Drawing.Size(742, 204)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -199,9 +196,9 @@ Partial Class Inventario
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 222)
+        Me.DataGridView1.Location = New System.Drawing.Point(14, 344)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(726, 171)
+        Me.DataGridView1.Size = New System.Drawing.Size(742, 171)
         Me.DataGridView1.TabIndex = 25
         '
         'Label10
@@ -310,11 +307,10 @@ Partial Class Inventario
         Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.Button5)
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(742, 403)
+        Me.TabPage2.Size = New System.Drawing.Size(742, 204)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Consulta "
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -323,14 +319,14 @@ Partial Class Inventario
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Refaccion ", "Herramienta"})
-        Me.ComboBox2.Location = New System.Drawing.Point(92, 159)
+        Me.ComboBox2.Location = New System.Drawing.Point(79, 92)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(255, 21)
         Me.ComboBox2.TabIndex = 43
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(92, 132)
+        Me.TextBox10.Location = New System.Drawing.Point(69, 40)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(622, 20)
         Me.TextBox10.TabIndex = 41
@@ -339,7 +335,7 @@ Partial Class Inventario
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(12, 159)
+        Me.Label12.Location = New System.Drawing.Point(6, 93)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(36, 16)
         Me.Label12.TabIndex = 39
@@ -349,7 +345,7 @@ Partial Class Inventario
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(9, 132)
+        Me.Label13.Location = New System.Drawing.Point(6, 40)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(57, 16)
         Me.Label13.TabIndex = 38
@@ -357,20 +353,12 @@ Partial Class Inventario
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(370, 190)
+        Me.Button5.Location = New System.Drawing.Point(396, 129)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 35
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(0, 243)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(736, 150)
-        Me.DataGridView2.TabIndex = 0
         '
         'MenuStrip1
         '
@@ -459,6 +447,7 @@ Partial Class Inventario
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Inventario"
         Me.Text = "Inventario"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -468,7 +457,6 @@ Partial Class Inventario
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -500,7 +488,6 @@ Partial Class Inventario
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Button5 As Button
-    Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgendaToolStripMenuItem As ToolStripMenuItem

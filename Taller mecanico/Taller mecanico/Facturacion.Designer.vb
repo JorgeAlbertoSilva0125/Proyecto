@@ -445,7 +445,7 @@ Partial Class Facturacion
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(0, 118)
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 118)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(736, 275)
         Me.DataGridView2.TabIndex = 0
