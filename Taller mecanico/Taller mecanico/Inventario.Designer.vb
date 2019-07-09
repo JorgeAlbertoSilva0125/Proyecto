@@ -24,19 +24,30 @@ Partial Class Inventario
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventario))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistorialYSeguimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FacturacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.fecha = New System.Windows.Forms.DateTimePicker()
+        Me.Cmb1 = New System.Windows.Forms.ComboBox()
+        Me.Txt9 = New System.Windows.Forms.TextBox()
+        Me.Txt8 = New System.Windows.Forms.TextBox()
+        Me.Txt7 = New System.Windows.Forms.TextBox()
+        Me.Txt6 = New System.Windows.Forms.TextBox()
+        Me.Txt5 = New System.Windows.Forms.TextBox()
+        Me.Txt4 = New System.Windows.Forms.TextBox()
+        Me.Txt3 = New System.Windows.Forms.TextBox()
+        Me.Txt1 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -53,22 +64,12 @@ Partial Class Inventario
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HistorialYSeguimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FacturacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -81,28 +82,120 @@ Partial Class Inventario
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(14, 344)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(742, 171)
+        Me.DataGridView1.TabIndex = 25
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.AgendaToolStripMenuItem, Me.InventarioToolStripMenuItem, Me.HistorialYSeguimientoToolStripMenuItem, Me.FacturacionToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(768, 24)
+        Me.MenuStrip1.TabIndex = 4
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        '
+        'AgendaToolStripMenuItem
+        '
+        Me.AgendaToolStripMenuItem.Name = "AgendaToolStripMenuItem"
+        Me.AgendaToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.AgendaToolStripMenuItem.Text = "Agenda"
+        '
+        'InventarioToolStripMenuItem
+        '
+        Me.InventarioToolStripMenuItem.Name = "InventarioToolStripMenuItem"
+        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
+        Me.InventarioToolStripMenuItem.Text = "Inventario"
+        '
+        'HistorialYSeguimientoToolStripMenuItem
+        '
+        Me.HistorialYSeguimientoToolStripMenuItem.Name = "HistorialYSeguimientoToolStripMenuItem"
+        Me.HistorialYSeguimientoToolStripMenuItem.Size = New System.Drawing.Size(144, 20)
+        Me.HistorialYSeguimientoToolStripMenuItem.Text = "Historial y seguimiento "
+        '
+        'FacturacionToolStripMenuItem
+        '
+        Me.FacturacionToolStripMenuItem.Name = "FacturacionToolStripMenuItem"
+        Me.FacturacionToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
+        Me.FacturacionToolStripMenuItem.Text = "Facturacion "
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(680, 543)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 11
+        Me.Button4.Text = "Salir"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(588, 543)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 10
+        Me.Button3.Text = "Cancelar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(495, 543)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "Eliminar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(413, 543)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Grabar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(318, 543)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 26
+        Me.Button6.Text = "Actualizar"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(13, 108)
+        Me.TabControl1.Location = New System.Drawing.Point(14, 108)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(750, 230)
-        Me.TabControl1.TabIndex = 5
+        Me.TabControl1.TabIndex = 27
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.DateTimePicker1)
-        Me.TabPage1.Controls.Add(Me.ComboBox1)
-        Me.TabPage1.Controls.Add(Me.TextBox9)
-        Me.TabPage1.Controls.Add(Me.TextBox8)
-        Me.TabPage1.Controls.Add(Me.TextBox7)
-        Me.TabPage1.Controls.Add(Me.TextBox6)
-        Me.TabPage1.Controls.Add(Me.TextBox5)
-        Me.TabPage1.Controls.Add(Me.TextBox4)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.fecha)
+        Me.TabPage1.Controls.Add(Me.Cmb1)
+        Me.TabPage1.Controls.Add(Me.Txt9)
+        Me.TabPage1.Controls.Add(Me.Txt8)
+        Me.TabPage1.Controls.Add(Me.Txt7)
+        Me.TabPage1.Controls.Add(Me.Txt6)
+        Me.TabPage1.Controls.Add(Me.Txt5)
+        Me.TabPage1.Controls.Add(Me.Txt4)
+        Me.TabPage1.Controls.Add(Me.Txt3)
+        Me.TabPage1.Controls.Add(Me.Txt1)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -121,85 +214,79 @@ Partial Class Inventario
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
+        'fecha
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(11, 164)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 38
+        Me.fecha.CustomFormat = "yyyy/MM/dd"
+        Me.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.fecha.Location = New System.Drawing.Point(11, 164)
+        Me.fecha.Name = "fecha"
+        Me.fecha.Size = New System.Drawing.Size(82, 20)
+        Me.fecha.TabIndex = 38
         '
-        'ComboBox1
+        'Cmb1
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Refaccion ", "Herramienta"})
-        Me.ComboBox1.Location = New System.Drawing.Point(88, 44)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(255, 21)
-        Me.ComboBox1.TabIndex = 37
+        Me.Cmb1.FormattingEnabled = True
+        Me.Cmb1.Items.AddRange(New Object() {"Refaccion ", "Herramienta"})
+        Me.Cmb1.Location = New System.Drawing.Point(88, 44)
+        Me.Cmb1.Name = "Cmb1"
+        Me.Cmb1.Size = New System.Drawing.Size(255, 21)
+        Me.Cmb1.TabIndex = 37
         '
-        'TextBox9
+        'Txt9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(582, 124)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(150, 20)
-        Me.TextBox9.TabIndex = 34
+        Me.Txt9.Location = New System.Drawing.Point(582, 124)
+        Me.Txt9.Name = "Txt9"
+        Me.Txt9.Size = New System.Drawing.Size(150, 20)
+        Me.Txt9.TabIndex = 34
         '
-        'TextBox8
+        'Txt8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(262, 120)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(55, 20)
-        Me.TextBox8.TabIndex = 33
+        Me.Txt8.Location = New System.Drawing.Point(262, 120)
+        Me.Txt8.Name = "Txt8"
+        Me.Txt8.Size = New System.Drawing.Size(55, 20)
+        Me.Txt8.TabIndex = 33
         '
-        'TextBox7
+        'Txt7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(396, 122)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(62, 20)
-        Me.TextBox7.TabIndex = 32
+        Me.Txt7.Location = New System.Drawing.Point(396, 122)
+        Me.Txt7.Name = "Txt7"
+        Me.Txt7.Size = New System.Drawing.Size(62, 20)
+        Me.Txt7.TabIndex = 32
         '
-        'TextBox6
+        'Txt6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(50, 119)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(146, 20)
-        Me.TextBox6.TabIndex = 31
+        Me.Txt6.Location = New System.Drawing.Point(50, 119)
+        Me.Txt6.Name = "Txt6"
+        Me.Txt6.Size = New System.Drawing.Size(146, 20)
+        Me.Txt6.TabIndex = 31
         '
-        'TextBox5
+        'Txt5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(478, 83)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox5.TabIndex = 30
+        Me.Txt5.Location = New System.Drawing.Point(478, 83)
+        Me.Txt5.Name = "Txt5"
+        Me.Txt5.Size = New System.Drawing.Size(121, 20)
+        Me.Txt5.TabIndex = 30
         '
-        'TextBox4
+        'Txt4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(134, 80)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(209, 20)
-        Me.TextBox4.TabIndex = 29
+        Me.Txt4.Location = New System.Drawing.Point(134, 80)
+        Me.Txt4.Name = "Txt4"
+        Me.Txt4.Size = New System.Drawing.Size(209, 20)
+        Me.Txt4.TabIndex = 29
         '
-        'TextBox3
+        'Txt3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(424, 44)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(286, 20)
-        Me.TextBox3.TabIndex = 28
+        Me.Txt3.Location = New System.Drawing.Point(424, 44)
+        Me.Txt3.Name = "Txt3"
+        Me.Txt3.Size = New System.Drawing.Size(286, 20)
+        Me.Txt3.TabIndex = 28
         '
-        'TextBox1
+        'Txt1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(88, 17)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(622, 20)
-        Me.TextBox1.TabIndex = 26
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(14, 344)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(742, 171)
-        Me.DataGridView1.TabIndex = 25
+        Me.Txt1.Location = New System.Drawing.Point(88, 17)
+        Me.Txt1.Name = "Txt1"
+        Me.Txt1.Size = New System.Drawing.Size(622, 20)
+        Me.Txt1.TabIndex = 26
         '
         'Label10
         '
@@ -330,6 +417,7 @@ Partial Class Inventario
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(622, 20)
         Me.TextBox10.TabIndex = 41
+        Me.TextBox10.UseWaitCursor = True
         '
         'Label12
         '
@@ -360,122 +448,61 @@ Partial Class Inventario
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.AgendaToolStripMenuItem, Me.InventarioToolStripMenuItem, Me.HistorialYSeguimientoToolStripMenuItem, Me.FacturacionToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(768, 24)
-        Me.MenuStrip1.TabIndex = 4
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ClientesToolStripMenuItem
-        '
-        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.ClientesToolStripMenuItem.Text = "Clientes"
-        '
-        'AgendaToolStripMenuItem
-        '
-        Me.AgendaToolStripMenuItem.Name = "AgendaToolStripMenuItem"
-        Me.AgendaToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.AgendaToolStripMenuItem.Text = "Agenda"
-        '
-        'InventarioToolStripMenuItem
-        '
-        Me.InventarioToolStripMenuItem.Name = "InventarioToolStripMenuItem"
-        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
-        Me.InventarioToolStripMenuItem.Text = "Inventario"
-        '
-        'HistorialYSeguimientoToolStripMenuItem
-        '
-        Me.HistorialYSeguimientoToolStripMenuItem.Name = "HistorialYSeguimientoToolStripMenuItem"
-        Me.HistorialYSeguimientoToolStripMenuItem.Size = New System.Drawing.Size(144, 20)
-        Me.HistorialYSeguimientoToolStripMenuItem.Text = "Historial y seguimiento "
-        '
-        'FacturacionToolStripMenuItem
-        '
-        Me.FacturacionToolStripMenuItem.Name = "FacturacionToolStripMenuItem"
-        Me.FacturacionToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
-        Me.FacturacionToolStripMenuItem.Text = "Facturacion "
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(680, 543)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Salir"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(588, 543)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Cancelar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(495, 543)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Eliminar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(413, 543)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Grabar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(768, 578)
+        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Inventario"
         Me.Text = "Inventario"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AgendaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InventarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistorialYSeguimientoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FacturacionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button6 As Button
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents fecha As DateTimePicker
+    Friend WithEvents Cmb1 As ComboBox
+    Friend WithEvents Txt9 As TextBox
+    Friend WithEvents Txt8 As TextBox
+    Friend WithEvents Txt7 As TextBox
+    Friend WithEvents Txt6 As TextBox
+    Friend WithEvents Txt5 As TextBox
+    Friend WithEvents Txt4 As TextBox
+    Friend WithEvents Txt3 As TextBox
+    Friend WithEvents Txt1 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
@@ -487,21 +514,9 @@ Partial Class Inventario
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Button5 As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgendaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InventarioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HistorialYSeguimientoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FacturacionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents Button5 As Button
 End Class

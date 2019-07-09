@@ -31,7 +31,7 @@ Public Class Agenda
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        'Consulta tabla clientes 
+        'Consulta tabla clientes para mostrar los clientes en el formulario de agenda 
         Dim consulta As String
         Dim lista As Byte
 
@@ -62,7 +62,7 @@ Public Class Agenda
     End Sub
 
     Private Sub ComboBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseClick
-        'Consulta tabla clientes 
+        'Consulta tabla clientes para escoger el cliente y despues poder llamar sus datos en el listbox 
         Dim consulta As String
         Dim lista As Byte
 
@@ -160,46 +160,66 @@ Public Class Agenda
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Codigo para insertar 
+        'Codigo para insertar Cita 
 
 
-        comandos = New MySqlCommand("INSERT INTO agenda(id_cliente,nombre,RFC,direccion,telefono,municipio,CP,email,estado,marca_vehiculo,modelo_vehiculo,placas)" & Chr(13) &
-                                      "VALUES('',@nombre,@RFC,@direccion,@telefono,@municipio,@CP,@email,@estado,@marca_vehiculo,@modelo_vehiculo,@placas)", conexion)
-        'If Txt1.Text <> "" Then
-        '    comandos.Parameters.AddWithValue("@nombre", Txt1.Text)
-        '    comandos.Parameters.AddWithValue("@RFC", Txt2.Text)
-        '    comandos.Parameters.AddWithValue("@direccion", Txt3.Text)
-        '    comandos.Parameters.AddWithValue("@telefono", Txt4.Text)
-        '    comandos.Parameters.AddWithValue("@municipio", Txt6.Text)
-        '    comandos.Parameters.AddWithValue("@CP", Txt5.Text)
-        '    comandos.Parameters.AddWithValue("@email", Txt8.Text)
-        '    comandos.Parameters.AddWithValue("@estado", Txt7.Text)
-        '    comandos.Parameters.AddWithValue("@marca_vehiculo", Txt9.Text)
-        '    comandos.Parameters.AddWithValue("@modelo_vehiculo", Txt10.Text)
-        '    comandos.Parameters.AddWithValue("@placas", Txt11.Text)
-        '    comandos.ExecuteNonQuery()
-        '    MsgBox("Datos guardados")
-        '    TextBox1.Clear()
-        '    ComboBox1.Items.Clear()
-        '    ListBox1.Items.Clear()
-        '    TextBox2.Clear()
-        '    TextBox3.Clear()
+        comandos = New MySqlCommand("INSERT INTO agenda(num_cita,nombre,fecha,hora,asunto)" & Chr(13) &
+                                      "VALUES('',@nombre,@fecha,@hora,@asunto)", conexion)
+        If ComboBox1.Text <> "" Then
+            comandos.Parameters.AddWithValue("@nombre", ComboBox1.Text)
+            comandos.Parameters.AddWithValue("@fecha", Calendar.Text)
+            comandos.Parameters.AddWithValue("@hora", TextBox3.Text)
+            comandos.Parameters.AddWithValue("@asunto", TextBox2.Text)
+            comandos.ExecuteNonQuery()
+            MsgBox("Datos guardados")
+            TextBox1.Clear()
+            ComboBox1.Items.Clear()
+            ListBox1.Items.Clear()
+            TextBox2.Clear()
+            TextBox3.Clear()
 
 
-        'Else
+        Else
 
-        '    Txt1.Text = ""
-        '    Txt2.Text = ""
-        '    Txt3.Text = ""
-        '    Txt4.Text = ""
-        '    Txt5.Text = ""
-        '    Txt6.Text = ""
-        '    Txt7.Text = ""
-        '    Txt8.Text = ""
-        '    Txt9.Text = ""
-        '    Txt10.Text = ""
-        '    Txt11.Text = ""
-        '    MsgBox("Error al registar cliente")
-        'End If
+            TextBox1.Text = ""
+            ComboBox1.Text = ""
+            ListBox1.ResetText()
+            TextBox2.Text = ""
+            TextBox3.Text = ""
+            MsgBox("Error al registar Cita")
+        End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        ' Mostrar datos de datadridview en los campos correspondientes 
+        ComboBox1.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
+        Calendar.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
+        TextBox3.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)
+        TextBox2.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        'codigo para actualizar registros 
+        Dim actualizar As String
+        Try
+            actualizar = "UPDATE agenda SET nombre='" & ComboBox1.Text & "', fecha='" & Calendar.Text & "' ,hora='" & TextBox3.Text & "',asunto='" & TextBox2.Text & "' WHERE nombre='" & TextBox14.Text & "'"
+            comandos = New MySqlCommand(actualizar, conexion)
+            comandos.ExecuteNonQuery()
+
+            'comandos.Parameters.AddWithValue("@nombre", ComboBox1.Text)
+            'comandos.Parameters.AddWithValue("@fecha", Calendar.Text)
+            'comandos.Parameters.AddWithValue("@hora", TextBox3.Text)
+            'comandos.Parameters.AddWithValue("@asunto", TextBox2.Text)
+
+            MsgBox("Los datos se han actualizado con exito")
+            TextBox1.Clear()
+            ComboBox1.Items.Clear()
+            ListBox1.Items.Clear()
+            TextBox2.Clear()
+            TextBox3.Clear()
+        Catch ex As Exception
+            MsgBox("Los datos no se actualizaron")
+        End Try
     End Sub
 End Class

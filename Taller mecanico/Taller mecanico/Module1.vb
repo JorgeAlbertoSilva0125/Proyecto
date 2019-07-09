@@ -47,5 +47,11 @@ Module modulo
 
     End Sub
 
+    Sub consultainventario(ByVal tabla As DataGridView)
+        adaptador = New MySqlDataAdapter("SELECT * FROM inventario", conexion)
+        Dim data As New DataSet
+        adaptador.Fill(data, "inventario")
+        tabla.DataSource = data.Tables("inventario")
+    End Sub
 End Module
 

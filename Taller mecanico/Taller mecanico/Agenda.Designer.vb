@@ -26,6 +26,7 @@ Partial Class Agenda
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Calendar = New System.Windows.Forms.DateTimePicker()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -38,6 +39,7 @@ Partial Class Agenda
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Calendar_Consul = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -53,8 +55,7 @@ Partial Class Agenda
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Calendar = New System.Windows.Forms.DateTimePicker()
-        Me.Calendar_Consul = New System.Windows.Forms.DateTimePicker()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -104,6 +105,15 @@ Partial Class Agenda
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Calendar
+        '
+        Me.Calendar.CustomFormat = "yyyy/MM/dd"
+        Me.Calendar.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Calendar.Location = New System.Drawing.Point(523, 20)
+        Me.Calendar.Name = "Calendar"
+        Me.Calendar.Size = New System.Drawing.Size(93, 20)
+        Me.Calendar.TabIndex = 43
         '
         'ListBox1
         '
@@ -213,6 +223,15 @@ Partial Class Agenda
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Consulta "
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Calendar_Consul
+        '
+        Me.Calendar_Consul.CustomFormat = "yyyy/MM/dd"
+        Me.Calendar_Consul.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Calendar_Consul.Location = New System.Drawing.Point(92, 70)
+        Me.Calendar_Consul.Name = "Calendar_Consul"
+        Me.Calendar_Consul.Size = New System.Drawing.Size(93, 20)
+        Me.Calendar_Consul.TabIndex = 44
         '
         'Button5
         '
@@ -333,27 +352,21 @@ Partial Class Agenda
         Me.Button1.Text = "Grabar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Calendar
+        'Button7
         '
-        Me.Calendar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Calendar.Location = New System.Drawing.Point(523, 20)
-        Me.Calendar.Name = "Calendar"
-        Me.Calendar.Size = New System.Drawing.Size(93, 20)
-        Me.Calendar.TabIndex = 43
-        '
-        'Calendar_Consul
-        '
-        Me.Calendar_Consul.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Calendar_Consul.Location = New System.Drawing.Point(92, 70)
-        Me.Calendar_Consul.Name = "Calendar_Consul"
-        Me.Calendar_Consul.Size = New System.Drawing.Size(93, 20)
-        Me.Calendar_Consul.TabIndex = 44
+        Me.Button7.Location = New System.Drawing.Point(321, 533)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 26
+        Me.Button7.Text = "Actualizar"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Agenda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 565)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -410,4 +423,5 @@ Partial Class Agenda
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Calendar As DateTimePicker
     Friend WithEvents Calendar_Consul As DateTimePicker
+    Friend WithEvents Button7 As Button
 End Class

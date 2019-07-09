@@ -178,7 +178,7 @@ Public Class Clientes
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
+        '  Codigo para candelar un registro y limpiar el formulario 
         If MsgBox("Desea cancelar el registro", vbQuestion + vbYesNo) = vbYes Then
 
             Txt1.Clear()
