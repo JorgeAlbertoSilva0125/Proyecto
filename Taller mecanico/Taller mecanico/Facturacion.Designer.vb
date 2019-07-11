@@ -282,9 +282,9 @@ Partial Class Facturacion
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(452, 144)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(54, 16)
+        Me.Label11.Size = New System.Drawing.Size(46, 16)
         Me.Label11.TabIndex = 23
-        Me.Label11.Text = "Modelo"
+        Me.Label11.Text = "Fecha"
         '
         'Label10
         '

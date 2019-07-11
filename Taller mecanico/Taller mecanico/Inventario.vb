@@ -71,6 +71,7 @@ Public Class Inventario
             comandos.Parameters.AddWithValue("@fecha", fecha.Text)
             comandos.Parameters.AddWithValue("@costo_refacciones", Txt9.Text)
             comandos.ExecuteNonQuery()
+
             MsgBox("Datos guardados")
             Txt1.Clear()
             Cmb1.Items.Clear()

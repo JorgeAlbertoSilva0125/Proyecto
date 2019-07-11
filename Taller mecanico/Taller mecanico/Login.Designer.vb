@@ -100,7 +100,7 @@ Partial Class Login
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Administrador", "Mecánico", "Ayudante"})
-        Me.ComboBox1.Location = New System.Drawing.Point(163, 126)
+        Me.ComboBox1.Location = New System.Drawing.Point(163, 125)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(147, 21)
         Me.ComboBox1.TabIndex = 7

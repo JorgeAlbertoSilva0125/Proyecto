@@ -1,8 +1,15 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Security.Cryptography
+Imports System.IO
+Imports System.Text
+Imports System.Collections.Generic
+Imports System.Net
+Imports System.Web
 Module modulo
+
     Dim adaptador As New MySqlDataAdapter
     Public MysqlCommand As New MySqlCommand
-    Public dread As MySqlDataReader
+    Public rdr As MySqlDataReader
     Dim MysqlConnString As String = "server='localhost'; user='root'; password=''; Database='taller_mecanico1'"
 
     Public conexion As MySqlConnection = New MySqlConnection(MysqlConnString)
@@ -53,5 +60,26 @@ Module modulo
         adaptador.Fill(data, "inventario")
         tabla.DataSource = data.Tables("inventario")
     End Sub
+
+    Public Function Encrypt(password As String) As String
+        Dim strmsg As String = String.Empty
+        Dim encode As Byte() = New Byte(password.Length - 1) {}
+        encode = Encoding.UTF8.GetBytes(password)
+        strmsg = Convert.ToBase64String(encode)
+        Return strmsg
+    End Function
+
+    Public Function Decrypt(encryptpwd As String) As String
+        Dim decryptpwd As String = String.Empty
+        Dim encodepwd As New UTF8Encoding()
+        Dim Decode As Decoder = encodepwd.GetDecoder()
+        Dim todecode_byte As Byte() = Convert.FromBase64String(encryptpwd)
+        Dim charCount As Integer = Decode.GetCharCount(todecode_byte, 0, todecode_byte.Length)
+        Dim decoded_char As Char() = New Char(charCount - 1) {}
+        Decode.GetChars(todecode_byte, 0, todecode_byte.Length, decoded_char, 0)
+        decryptpwd = New [String](decoded_char)
+        Return decryptpwd
+    End Function
+
 End Module
 
