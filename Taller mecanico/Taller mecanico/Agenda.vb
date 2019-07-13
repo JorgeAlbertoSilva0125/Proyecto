@@ -165,6 +165,9 @@ Public Class Agenda
 
         comandos = New MySqlCommand("INSERT INTO agenda(num_cita,nombre,fecha,hora,asunto)" & Chr(13) &
                                       "VALUES('',@nombre,@fecha,@hora,@asunto)", conexion)
+
+
+        conexion.Open()
         If ComboBox1.Text <> "" Then
             comandos.Parameters.AddWithValue("@nombre", ComboBox1.Text)
             comandos.Parameters.AddWithValue("@fecha", Calendar.Text)
@@ -222,4 +225,6 @@ Public Class Agenda
             MsgBox("Los datos no se actualizaron")
         End Try
     End Sub
+
+
 End Class

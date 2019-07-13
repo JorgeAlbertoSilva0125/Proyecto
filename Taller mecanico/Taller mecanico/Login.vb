@@ -50,7 +50,7 @@ Public Class Login
                 lista = datos.Tables("usuarios").Rows.Count
 
                 If lista <> 0 Then
-                    MsgBox("Bienvenido")
+                    MsgBox("Bienvenido" + " " + TextBox1.Text)
                     Home.Show()
 
                 Else

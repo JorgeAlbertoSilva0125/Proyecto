@@ -1,0 +1,23 @@
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\Taller mecanico.exe.config
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\Taller mecanico.exe
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\Taller mecanico.pdb
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\Taller mecanico.xml
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\MySql.Data.dll
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\Google.Protobuf.dll
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Release\MySql.Data.xml
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller mecanico.vbprojAssemblyReference.cache
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Agenda.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Facturacion.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Login.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Home.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Clientes.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Historial_y_Seguimiento.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Inventario.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller_mecanico.Resources.resources
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller mecanico.vbproj.GenerateResource.cache
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller mecanico.vbproj.CoreCompileInputs.cache
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller mecanico.vbproj.CopyComplete
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller mecanico.exe
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller mecanico.xml
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Release\Taller mecanico.pdb

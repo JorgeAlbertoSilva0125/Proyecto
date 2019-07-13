@@ -17,6 +17,7 @@ Public Class Clientes
 
         comandos = New MySqlCommand("INSERT INTO clientes(id_cliente,nombre,RFC,direccion,telefono,municipio,CP,email,estado,marca_vehiculo,modelo_vehiculo,placas)" & Chr(13) &
                                       "VALUES('',@nombre,@RFC,@direccion,@telefono,@municipio,@CP,@email,@estado,@marca_vehiculo,@modelo_vehiculo,@placas)", conexion)
+        conexion.Open()
         If Txt1.Text <> "" Then
             comandos.Parameters.AddWithValue("@nombre", Txt1.Text)
             comandos.Parameters.AddWithValue("@RFC", Txt2.Text)

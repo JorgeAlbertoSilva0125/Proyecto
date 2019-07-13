@@ -59,6 +59,9 @@ Public Class Inventario
 
         comandos = New MySqlCommand("INSERT INTO inventario(num_articulo,nombre_refaccion,tipo_refaccion,ubicacion,existencia_taller,cantidad_minima,entradas,salidas,hora,fecha,costo_refacciones)" & Chr(13) &
                                           "VALUES('',@nombre_refaccion,@tipo_refaccion,@ubicacion,@existencia_taller,@cantidad_minima,@entradas,@salidas,@hora,@fecha,@costo_refacciones)", conexion)
+
+        conexion.Open()
+
         If Txt1.Text <> "" Then
             comandos.Parameters.AddWithValue("@nombre_refaccion", Txt1.Text)
             comandos.Parameters.AddWithValue("@tipo_refaccion", Cmb1.SelectedItem)

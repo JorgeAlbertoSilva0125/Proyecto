@@ -26,22 +26,22 @@ Partial Class Facturacion
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Cbx2 = New System.Windows.Forms.ComboBox()
+        Me.fecha = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Txt6 = New System.Windows.Forms.TextBox()
+        Me.Txt4 = New System.Windows.Forms.TextBox()
+        Me.Txt5 = New System.Windows.Forms.TextBox()
+        Me.Txt3 = New System.Windows.Forms.TextBox()
+        Me.Txt2 = New System.Windows.Forms.TextBox()
+        Me.Txt1 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -54,13 +54,13 @@ Partial Class Facturacion
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.fecha3 = New System.Windows.Forms.DateTimePicker()
+        Me.fecha2 = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -71,13 +71,14 @@ Partial Class Facturacion
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Consultar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,7 +96,7 @@ Partial Class Facturacion
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(13, 108)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 108)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(750, 425)
@@ -103,22 +104,22 @@ Partial Class Facturacion
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ListBox1)
         Me.TabPage1.Controls.Add(Me.PictureBox3)
         Me.TabPage1.Controls.Add(Me.PictureBox2)
-        Me.TabPage1.Controls.Add(Me.ComboBox2)
-        Me.TabPage1.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage1.Controls.Add(Me.Cbx2)
+        Me.TabPage1.Controls.Add(Me.fecha)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
         Me.TabPage1.Controls.Add(Me.Button9)
         Me.TabPage1.Controls.Add(Me.Button8)
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.Button6)
-        Me.TabPage1.Controls.Add(Me.TextBox10)
-        Me.TabPage1.Controls.Add(Me.TextBox8)
-        Me.TabPage1.Controls.Add(Me.TextBox7)
-        Me.TabPage1.Controls.Add(Me.TextBox6)
-        Me.TabPage1.Controls.Add(Me.TextBox4)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.Txt6)
+        Me.TabPage1.Controls.Add(Me.Txt4)
+        Me.TabPage1.Controls.Add(Me.Txt5)
+        Me.TabPage1.Controls.Add(Me.Txt3)
+        Me.TabPage1.Controls.Add(Me.Txt2)
+        Me.TabPage1.Controls.Add(Me.Txt1)
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.Label10)
@@ -135,6 +136,14 @@ Partial Class Facturacion
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(392, 3)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(334, 121)
+        Me.ListBox1.TabIndex = 45
         '
         'PictureBox3
         '
@@ -156,21 +165,23 @@ Partial Class Facturacion
         Me.PictureBox2.TabIndex = 43
         Me.PictureBox2.TabStop = False
         '
-        'ComboBox2
+        'Cbx2
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Efectivo", "Tarjeta de credito", "Tarjeta de debido", "Transferencia "})
-        Me.ComboBox2.Location = New System.Drawing.Point(546, 161)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 42
+        Me.Cbx2.FormattingEnabled = True
+        Me.Cbx2.Items.AddRange(New Object() {"Efectivo", "Tarjeta de credito", "Tarjeta de debido", "Transferencia "})
+        Me.Cbx2.Location = New System.Drawing.Point(546, 161)
+        Me.Cbx2.Name = "Cbx2"
+        Me.Cbx2.Size = New System.Drawing.Size(121, 21)
+        Me.Cbx2.TabIndex = 42
         '
-        'DateTimePicker1
+        'fecha
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(442, 162)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(84, 20)
-        Me.DateTimePicker1.TabIndex = 41
+        Me.fecha.CustomFormat = "yyyy/MM/dd"
+        Me.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.fecha.Location = New System.Drawing.Point(442, 162)
+        Me.fecha.Name = "fecha"
+        Me.fecha.Size = New System.Drawing.Size(84, 20)
+        Me.fecha.TabIndex = 41
         '
         'ComboBox1
         '
@@ -216,55 +227,47 @@ Partial Class Facturacion
         Me.Button6.Text = "Buscar"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'TextBox10
+        'Txt6
         '
-        Me.TextBox10.Location = New System.Drawing.Point(323, 163)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 35
+        Me.Txt6.Location = New System.Drawing.Point(323, 163)
+        Me.Txt6.Name = "Txt6"
+        Me.Txt6.Size = New System.Drawing.Size(100, 20)
+        Me.Txt6.TabIndex = 35
         '
-        'TextBox8
+        'Txt4
         '
-        Me.TextBox8.Location = New System.Drawing.Point(123, 163)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(90, 20)
-        Me.TextBox8.TabIndex = 33
+        Me.Txt4.Location = New System.Drawing.Point(123, 163)
+        Me.Txt4.Name = "Txt4"
+        Me.Txt4.Size = New System.Drawing.Size(90, 20)
+        Me.Txt4.TabIndex = 33
         '
-        'TextBox7
+        'Txt5
         '
-        Me.TextBox7.Location = New System.Drawing.Point(225, 163)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(78, 20)
-        Me.TextBox7.TabIndex = 32
+        Me.Txt5.Location = New System.Drawing.Point(225, 163)
+        Me.Txt5.Name = "Txt5"
+        Me.Txt5.Size = New System.Drawing.Size(78, 20)
+        Me.Txt5.TabIndex = 32
         '
-        'TextBox6
+        'Txt3
         '
-        Me.TextBox6.Location = New System.Drawing.Point(3, 163)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(114, 20)
-        Me.TextBox6.TabIndex = 31
+        Me.Txt3.Location = New System.Drawing.Point(3, 163)
+        Me.Txt3.Name = "Txt3"
+        Me.Txt3.Size = New System.Drawing.Size(114, 20)
+        Me.Txt3.TabIndex = 31
         '
-        'TextBox4
+        'Txt2
         '
-        Me.TextBox4.Location = New System.Drawing.Point(108, 99)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(265, 20)
-        Me.TextBox4.TabIndex = 29
+        Me.Txt2.Location = New System.Drawing.Point(108, 99)
+        Me.Txt2.Name = "Txt2"
+        Me.Txt2.Size = New System.Drawing.Size(265, 20)
+        Me.Txt2.TabIndex = 29
         '
-        'TextBox2
+        'Txt1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(397, 16)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(330, 99)
-        Me.TextBox2.TabIndex = 27
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(88, 17)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(285, 20)
-        Me.TextBox1.TabIndex = 26
+        Me.Txt1.Location = New System.Drawing.Point(88, 17)
+        Me.Txt1.Name = "Txt1"
+        Me.Txt1.Size = New System.Drawing.Size(285, 20)
+        Me.Txt1.TabIndex = 26
         '
         'Label12
         '
@@ -357,15 +360,16 @@ Partial Class Facturacion
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Consultar)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.Label2)
-        Me.TabPage2.Controls.Add(Me.DateTimePicker3)
-        Me.TabPage2.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage2.Controls.Add(Me.fecha3)
+        Me.TabPage2.Controls.Add(Me.fecha2)
         Me.TabPage2.Controls.Add(Me.ComboBox3)
         Me.TabPage2.Controls.Add(Me.Button5)
         Me.TabPage2.Controls.Add(Me.TextBox14)
         Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Controls.Add(Me.DataGridView1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -394,19 +398,23 @@ Partial Class Facturacion
         Me.Label2.TabIndex = 39
         Me.Label2.Text = "Fecha de inicio"
         '
-        'DateTimePicker3
+        'fecha3
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(539, 26)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(125, 20)
-        Me.DateTimePicker3.TabIndex = 38
+        Me.fecha3.CustomFormat = "yyyy/MM/dd"
+        Me.fecha3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.fecha3.Location = New System.Drawing.Point(552, 26)
+        Me.fecha3.Name = "fecha3"
+        Me.fecha3.Size = New System.Drawing.Size(102, 20)
+        Me.fecha3.TabIndex = 38
         '
-        'DateTimePicker2
+        'fecha2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(389, 25)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(130, 20)
-        Me.DateTimePicker2.TabIndex = 37
+        Me.fecha2.CustomFormat = "yyyy/MM/dd"
+        Me.fecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.fecha2.Location = New System.Drawing.Point(414, 26)
+        Me.fecha2.Name = "fecha2"
+        Me.fecha2.Size = New System.Drawing.Size(105, 20)
+        Me.fecha2.TabIndex = 37
         '
         'ComboBox3
         '
@@ -418,7 +426,7 @@ Partial Class Facturacion
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(295, 89)
+        Me.Button5.Location = New System.Drawing.Point(6, 51)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 35
@@ -442,13 +450,13 @@ Partial Class Facturacion
         Me.Label15.TabIndex = 29
         Me.Label15.Text = "Nombre"
         '
-        'DataGridView2
+        'DataGridView1
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 118)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(736, 275)
-        Me.DataGridView2.TabIndex = 0
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 118)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(736, 275)
+        Me.DataGridView1.TabIndex = 0
         '
         'MenuStrip1
         '
@@ -525,6 +533,15 @@ Partial Class Facturacion
         Me.Button1.Text = "Facturar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Consultar
+        '
+        Me.Consultar.Location = New System.Drawing.Point(295, 89)
+        Me.Consultar.Name = "Consultar"
+        Me.Consultar.Size = New System.Drawing.Size(75, 23)
+        Me.Consultar.TabIndex = 41
+        Me.Consultar.Text = "Consulta"
+        Me.Consultar.UseVisualStyleBackColor = True
+        '
         'Facturacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -547,7 +564,7 @@ Partial Class Facturacion
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -558,13 +575,12 @@ Partial Class Facturacion
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Txt6 As TextBox
+    Friend WithEvents Txt4 As TextBox
+    Friend WithEvents Txt5 As TextBox
+    Friend WithEvents Txt3 As TextBox
+    Friend WithEvents Txt2 As TextBox
+    Friend WithEvents Txt1 As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -584,8 +600,8 @@ Partial Class Facturacion
     Friend WithEvents InventarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistorialYSeguimientoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FacturacionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Cbx2 As ComboBox
+    Friend WithEvents fecha As DateTimePicker
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
@@ -593,14 +609,16 @@ Partial Class Facturacion
     Friend WithEvents Button6 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker3 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents fecha3 As DateTimePicker
+    Friend WithEvents fecha2 As DateTimePicker
     Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Consultar As Button
 End Class
