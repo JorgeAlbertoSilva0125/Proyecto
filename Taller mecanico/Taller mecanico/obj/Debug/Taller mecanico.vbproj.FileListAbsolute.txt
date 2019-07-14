@@ -43,3 +43,9 @@ C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico
 C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbproj.CoreCompileInputs.cache
 C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbproj.CopyComplete
 C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Debug\itextsharp.xml
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller mecanico.vbproj.ResolveComReference.cache
+C:\Users\Jorge Silva\source\repos\JorgeAlbertoSilva0125\Proyecto\Taller mecanico\Taller mecanico\obj\Debug\Taller_mecanico.VisualizarPdf.resources

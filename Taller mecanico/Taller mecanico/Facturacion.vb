@@ -448,22 +448,22 @@ Public Class Facturacion
             cb.SetTextMatrix(270, 365)
             cb.ShowText(Me.Txt6.Text)
 
-            cb.SetTextMatrix(40, 330)
+            cb.SetTextMatrix(40, 345)
             cb.ShowText("Modo de pago: " & Me.Cbx2.Text)
-            cb.SetTextMatrix(40, 315)
+            cb.SetTextMatrix(40, 330)
             cb.ShowText("Condiciones de pago: Contado")
 
-            cb.SetTextMatrix(40, 300)
+            cb.SetTextMatrix(40, 315)
             cb.ShowText("Cantidad con letra: ")
-            cb.SetTextMatrix(40, 295)
-            cb.ShowText(" ")
+            cb.SetTextMatrix(40, 300)
+            cb.ShowText(Letras(Txt6.Text) & "Pesos 00/100 MXN")
 
             '-------------------------------------------------------------------------------------------------------
 
             'Sello de CFDI      
             '------------------------------------------------------------------------------------------------------
 
-            cb.SetTextMatrix(40, 280)
+            cb.SetTextMatrix(40, 285)
             cb.ShowText("Sello digital del CFDI: ")
             cb.SetTextMatrix(40, 270)
             cb.ShowText("f0Tb/489LdeGja/SeZWWe/FnFcH6fo08Vj5MeO67pEPg81bWvSR")
@@ -493,7 +493,7 @@ Public Class Facturacion
 
             'Sello sat          
             '------------------------------------------------------------------------------------------------------
-            cb.SetTextMatrix(40, 200)
+            cb.SetTextMatrix(40, 205)
             cb.ShowText("Sello SAT: ")
             cb.SetTextMatrix(40, 190)
             cb.ShowText("GqDiRrea6 E2wQhqOCVzwME4866yVEME/8PD1S1g6AV48D8VrL")
@@ -534,5 +534,8 @@ Public Class Facturacion
         'cb.ShowText(Me.DataGridView1.Text)
     End Sub
 
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        VisualizarPdf.Show()
 
+    End Sub
 End Class
