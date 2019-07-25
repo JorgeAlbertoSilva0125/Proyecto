@@ -60,6 +60,7 @@ Public Class Clientes
             Txt11.Text = ""
             MsgBox("Error al registar cliente")
         End If
+        conexion.Close()
 
 
     End Sub
@@ -93,10 +94,51 @@ Public Class Clientes
                 MsgBox("datos no encontrados")
 
             End If
+            conexion.Close()
 
         End If
 
+        If TextBox13.Text <> "" Then
 
+            consulta = "Select * FROM clientes WHERE RFC ='" & TextBox13.Text & "'"
+            adaptador = New MySqlDataAdapter(consulta, conexion)
+            datos = New DataSet
+            adaptador.Fill(datos, "clientes")
+            lista = datos.Tables("clientes").Rows.Count
+
+            If lista <> 0 Then
+                'TextBox13.Text = datos.Tables("clientes").Rows(0).Item("RFC")
+                'TextBox12.Text = datos.Tables("clientes").Rows(0).Item("placas")
+                DataGridView1.DataSource = datos
+                DataGridView1.DataMember = "clientes"
+            Else
+                MsgBox("datos no encontrados")
+
+            End If
+            conexion.Close()
+
+        End If
+
+        If TextBox12.Text <> "" Then
+
+            consulta = "Select * FROM clientes WHERE placas ='" & TextBox12.Text & "'"
+            adaptador = New MySqlDataAdapter(consulta, conexion)
+            datos = New DataSet
+            adaptador.Fill(datos, "clientes")
+            lista = datos.Tables("clientes").Rows.Count
+
+            If lista <> 0 Then
+                'TextBox13.Text = datos.Tables("clientes").Rows(0).Item("RFC")
+                'TextBox12.Text = datos.Tables("clientes").Rows(0).Item("placas")
+                DataGridView1.DataSource = datos
+                DataGridView1.DataMember = "clientes"
+            Else
+                MsgBox("datos no encontrados")
+
+            End If
+            conexion.Close()
+
+        End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -105,6 +147,8 @@ Public Class Clientes
         Dim si As Byte
         si = MsgBox("¿Desea eliminar?", vbYesNo, "Eliminar")
         If si = 6 Then
+            conexion.Open()
+
             eliminar = "DELETE FROM clientes WHERE nombre='" & TextBox14.Text & "'"
             comandos = New MySqlCommand(eliminar, conexion)
             comandos.ExecuteNonQuery()
@@ -112,6 +156,8 @@ Public Class Clientes
             TextBox14.Clear()
             TextBox13.Clear()
             TextBox12.Clear()
+
+            conexion.Close()
 
         End If
 
@@ -141,9 +187,12 @@ Public Class Clientes
         'codigo para actualizar registros 
         Dim actualizar As String
         Try
-            actualizar = "UPDATE clientes SET nombre='" & Txt1.Text & "', RFC='" & Txt2.Text & "' ,direccion='" & Txt3.Text & "',telefono='" & Txt4.Text & "' ,municipio='" & Txt6.Text & "' ,CP='" & Txt5.Text & "',email= '" & Txt8.Text & "' ,estado='" & Txt7.Text & "' ,marca_vehiculo='" & Txt9.Text & "' ,modelo_vehiculo='" & Txt10.Text & "' ,placas= '" & Txt11.Text & "' WHERE nombre='" & TextBox14.Text & "'"
+            conexion.Open()
+
+            actualizar = "UPDATE clientes SET nombre='" & Txt1.Text & "', RFC='" & Txt2.Text & "' ,direccion='" & Txt3.Text & "',telefono='" & Txt4.Text & "' ,municipio='" & Txt6.Text & "' ,CP='" & Txt5.Text & "',email= '" & Txt8.Text & "' ,estado='" & Txt7.Text & "' ,marca_vehiculo='" & Txt9.Text & "' ,modelo_vehiculo='" & Txt10.Text & "' ,placas= '" & Txt11.Text & "' WHERE id_cliente='" & id.Text & "'"
             comandos = New MySqlCommand(actualizar, conexion)
             comandos.ExecuteNonQuery()
+
             MsgBox("Los Datos se han actualizado con exito ")
             Txt1.Clear()
             Txt2.Clear()
@@ -156,13 +205,18 @@ Public Class Clientes
             Txt9.Clear()
             Txt10.Clear()
             Txt11.Clear()
+            DataGridView1.Refresh()
+
         Catch ex As Exception
             MsgBox("Los datos no se actualizaron")
         End Try
+        conexion.Close()
+
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Mostrar datos de datadridview en los texbox correspondientes 
+        id.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
         Txt1.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
         Txt2.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
         Txt3.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)
@@ -182,6 +236,7 @@ Public Class Clientes
         '  Codigo para candelar un registro y limpiar el formulario 
         If MsgBox("Desea cancelar el registro", vbQuestion + vbYesNo) = vbYes Then
 
+            id.Clear()
             Txt1.Clear()
             Txt2.Clear()
             Txt3.Clear()
@@ -198,5 +253,29 @@ Public Class Clientes
 
 
 
+    End Sub
+
+    Private Sub Txt4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt4.KeyPress
+        solonumeros(e)
+    End Sub
+
+    Private Sub Txt5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt5.KeyPress
+        solonumeros(e)
+    End Sub
+
+    Private Sub Txt10_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt10.KeyPress
+        solonumeros(e)
+    End Sub
+
+    Private Sub Txt1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt1.KeyPress
+        Sololetras(e)
+    End Sub
+
+    Private Sub Txt6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt6.KeyPress
+        Sololetras(e)
+    End Sub
+
+    Private Sub Txt7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt7.KeyPress
+        Sololetras(e)
     End Sub
 End Class

@@ -34,12 +34,14 @@ Public Class Inventario
         'codigo para actualizar registros 
         Dim actualizar As String
         Try
-            actualizar = "UPDATE inventario SET nombre_refaccion='" & Txt1.Text & "', tipo_refaccion='" & Cmb1.SelectedItem & "' ,ubicacion='" & Txt3.Text & "',existencia_taller='" & Txt4.Text & "' ,cantidad_minima='" & Txt5.Text & "' ,entradas='" & Txt8.Text & "',salidas= '" & Txt7.Text & "' ,hora='" & Txt6.Text & "' , fecha='" & fecha.Text & "',costo_refacciones='" & Txt9.Text & "' WHERE nombre_refaccion='" & Txt1.Text & "'"
+            conexion.Open()
+
+            actualizar = "UPDATE inventario SET nombre_refaccion='" & Txt1.Text & "', tipo_refaccion='" & Cmb1.SelectedItem & "' ,ubicacion='" & Txt3.Text & "',existencia_taller='" & Txt4.Text & "' ,cantidad_minima='" & Txt5.Text & "' ,entradas='" & Txt8.Text & "',salidas= '" & Txt7.Text & "' ,hora='" & Txt6.Text & "' , fecha='" & fecha.Text & "',costo_refacciones='" & Txt9.Text & "' WHERE num_articulo='" & id.Text & "'"
             comandos = New MySqlCommand(actualizar, conexion)
             comandos.ExecuteNonQuery()
             MsgBox("Los Datos se han actualizado con exito ")
             Txt1.Clear()
-            Cmb1.Items.Clear()
+            Cmb1.Refresh()
             Txt3.Clear()
             Txt4.Clear()
             Txt5.Clear()
@@ -52,6 +54,8 @@ Public Class Inventario
         Catch ex As Exception
             MsgBox("Los datos no se actualizaron")
         End Try
+        conexion.Close()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -77,7 +81,7 @@ Public Class Inventario
 
             MsgBox("Datos guardados")
             Txt1.Clear()
-            Cmb1.Items.Clear()
+            Cmb1.Refresh()
             Txt3.Clear()
             Txt4.Clear()
             Txt5.Clear()
@@ -99,6 +103,8 @@ Public Class Inventario
 
             MsgBox("Error al registar cliente")
         End If
+        conexion.Close()
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -107,12 +113,16 @@ Public Class Inventario
         Dim si As Byte
         si = MsgBox("¿Desea eliminar?", vbYesNo, "Eliminar")
         If si = 6 Then
+            conexion.Open()
+
             eliminar = "DELETE FROM Inventario  WHERE nombre_refaccion='" & TextBox10.Text & "' and tipo_refaccion='" & ComboBox2.SelectedItem & "'"
             comandos = New MySqlCommand(eliminar, conexion)
             comandos.ExecuteNonQuery()
             MsgBox("Eliminado")
             TextBox10.Clear()
         End If
+        conexion.Close()
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -120,7 +130,7 @@ Public Class Inventario
         If MsgBox("Desea cancelar el registro", vbQuestion + vbYesNo) = vbYes Then
 
             Txt1.Clear()
-            Cmb1.Items.Clear()
+            Cmb1.Refresh()
             Txt3.Clear()
             Txt4.Clear()
             Txt5.Clear()
@@ -165,9 +175,12 @@ Public Class Inventario
             End If
 
         End If
+        conexion.Close()
+
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        id.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
         Txt1.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
         Cmb1.SelectedItem = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
         Txt3.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)
@@ -180,5 +193,35 @@ Public Class Inventario
         Txt9.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(10).Value.ToString)
 
 
+    End Sub
+
+    Private Sub Txt1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt1.KeyPress
+        Sololetras(e)
+    End Sub
+
+    Private Sub Txt4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt4.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub Txt5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt5.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub Txt8_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt8.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub Txt7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt7.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub Txt9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt9.KeyPress
+        Solonumeros(e)
+
+
+    End Sub
+
+    Private Sub TextBox10_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox10.KeyPress
+        Sololetras(e)
     End Sub
 End Class

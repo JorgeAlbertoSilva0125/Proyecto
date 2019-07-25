@@ -9,6 +9,7 @@ Public Class Facturacion
     Dim comandos As New MySqlCommand
     Dim adaptador As New MySqlDataAdapter
     Dim datos As New DataSet
+
     Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
         Clientes.Show()
         Me.Close()
@@ -33,9 +34,6 @@ Public Class Facturacion
         Me.Close()
     End Sub
 
-    Private Sub Facturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         'Consulta tabla clientes para mostrar los clientes en el formulario de agenda 
@@ -57,8 +55,10 @@ Public Class Facturacion
                 MsgBox("datos no encontrados")
 
             End If
+            conexion.Close()
 
         End If
+
     End Sub
 
 
@@ -81,14 +81,14 @@ Public Class Facturacion
 
             comandos.ExecuteNonQuery()
             MsgBox("Datos guardados")
-            Txt1.Clear()
-            Txt2.Clear()
-            Txt3.Clear()
-            Txt4.Clear()
-            Txt5.Clear()
-            Txt6.Clear()
-            ComboBox1.Items.Clear()
-            Cbx2.Items.Clear()
+            'Txt1.Clear()
+            'Txt2.Clear()
+            'Txt3.Clear()
+            'Txt4.Clear()
+            'Txt5.Clear()
+            'Txt6.Clear()
+            'ComboBox1.Items.Clear()
+            'Cbx2.Items.Clear()
 
 
         Else
@@ -103,6 +103,7 @@ Public Class Facturacion
             Cbx2.Text = ""
             MsgBox("Error al registar cliente")
         End If
+        conexion.Close()
 
     End Sub
 
@@ -112,7 +113,9 @@ Public Class Facturacion
         Dim si As Byte
         si = MsgBox("¿Desea eliminar?", vbYesNo, "Eliminar")
         If si = 6 Then
-            eliminar = "DELETE FROM facturacion WHERE nombre='" & TextBox14.Text & "'"
+            conexion.Open()
+
+            eliminar = "DELETE FROM facturacion WHERE id_fac='" & id.Text & "'"
             comandos = New MySqlCommand(eliminar, conexion)
             comandos.ExecuteNonQuery()
             MsgBox("Eliminado")
@@ -123,9 +126,10 @@ Public Class Facturacion
             Txt5.Clear()
             Txt6.Clear()
             ComboBox1.Items.Clear()
-            Cbx2.Items.Clear()
+            Cbx2.Refresh()
             ListBox1.Items.Clear()
 
+            conexion.Close()
 
         End If
     End Sub
@@ -187,6 +191,7 @@ Public Class Facturacion
                 MsgBox("datos no encontrados")
 
             End If
+            conexion.Close()
 
         End If
 
@@ -225,20 +230,24 @@ Public Class Facturacion
                 MsgBox("datos no encontrados")
 
             End If
+            conexion.Close()
 
         End If
     End Sub
 
     Private Sub Consultar_Click(sender As Object, e As EventArgs) Handles Consultar.Click
-        'Consulta tabla agenda
+        'Consulta tabla facturacion
         Dim dtgd As String
         Dim lis As Byte
         ' codigo que llama a la datagrid los datos que contiene la tabla agenda 
-        consultafac(DataGridView1)
 
-        If ComboBox3.Text <> "" And fecha2.Text <> "" Then
+        Consultafac(DataGridView1)
 
-            dtgd = "Select * FROM facturacion WHERE nombre ='" & ComboBox3.Text & "' and fecha='" & fecha2.Text & "'"
+
+
+            If ComboBox3.Text <> "" Then
+
+            dtgd = "Select * FROM facturacion WHERE nombre ='" & ComboBox3.Text & "'"
             adaptador = New MySqlDataAdapter(dtgd, conexion)
             datos = New DataSet
             adaptador.Fill(datos, "facturacion")
@@ -253,8 +262,47 @@ Public Class Facturacion
                 MsgBox("datos no encontrados")
 
             End If
+            conexion.Close()
 
         End If
+        If fecha2.Text <> "" Then
+
+            dtgd = "Select * FROM facturacion WHERE  fecha='" & fecha2.Text & "'"
+            adaptador = New MySqlDataAdapter(dtgd, conexion)
+            datos = New DataSet
+            adaptador.Fill(datos, "facturacion")
+            lis = datos.Tables("facturacion").Rows.Count
+
+            If lis <> 0 Then
+                'TextBox13.Text = datos.Tables("clientes").Rows(0).Item("RFC")
+                'TextBox12.Text = datos.Tables("clientes").Rows(0).Item("placas")
+                DataGridView1.DataSource = datos
+                DataGridView1.DataMember = "facturacion"
+
+            End If
+            conexion.Close()
+
+        End If
+
+        If fecha3.Text <> "" Then
+
+            dtgd = "Select * FROM facturacion WHERE  fecha='" & fecha3.Text & "'"
+            adaptador = New MySqlDataAdapter(dtgd, conexion)
+            datos = New DataSet
+            adaptador.Fill(datos, "facturacion")
+            lis = datos.Tables("facturacion").Rows.Count
+
+            If lis <> 0 Then
+                'TextBox13.Text = datos.Tables("clientes").Rows(0).Item("RFC")
+                'TextBox12.Text = datos.Tables("clientes").Rows(0).Item("placas")
+                DataGridView1.DataSource = datos
+                DataGridView1.DataMember = "facturacion"
+
+            End If
+            conexion.Close()
+
+        End If
+
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
@@ -292,7 +340,7 @@ Public Class Facturacion
             document.AddAuthor("")
             document.AddTitle("")
             Dim writer As PdfWriter = PdfWriter.GetInstance(document, New System.IO.FileStream(ruta, System.IO.FileMode.Create))
-            Dim pdfw As iTextSharp.text.pdf.PdfWriter
+            ' Dim pdfw As iTextSharp.text.pdf.PdfWriter
             ' con  esto conseguiremos que el documento sea presentado como pagina simple 
             writer.ViewerPreferences = PdfWriter.PageLayoutSinglePage
 
@@ -529,6 +577,17 @@ Public Class Facturacion
             MessageBox.Show("Error en la generacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
+        Txt1.Clear()
+        Txt2.Clear()
+        Txt3.Clear()
+        Txt4.Clear()
+        Txt5.Clear()
+        Txt6.Clear()
+        ComboBox1.Items.Clear()
+        Cbx2.Items.Clear()
+        ListBox1.Items.Clear()
+        fecha.Refresh()
+
         'codigo para agregar el contenido de una datagrid
         'cb.SetTextMatrix(50, 670)
         'cb.ShowText(Me.DataGridView1.Text)
@@ -537,5 +596,34 @@ Public Class Facturacion
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         VisualizarPdf.Show()
 
+    End Sub
+
+    Private Sub Txt1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt1.KeyPress
+        Sololetras(e)
+
+    End Sub
+
+    Private Sub Txt2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt2.KeyPress
+        Sololetras(e)
+    End Sub
+
+    Private Sub Txt3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt3.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub Txt4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt4.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub Txt5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt5.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        Solonumeros(e)
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        id.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
     End Sub
 End Class

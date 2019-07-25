@@ -32,7 +32,7 @@ Module modulo
     'End Try
 
 
-    Sub consultaclientes(ByVal tabla As DataGridView)
+    Sub Consultaclientes(ByVal tabla As DataGridView)
         adaptador = New MySqlDataAdapter("SELECT * FROM clientes", conexion)
         Dim data As New DataSet
         adaptador.Fill(data, "clientes")
@@ -41,7 +41,7 @@ Module modulo
     End Sub
 
 
-    Sub consultagenda(ByVal tabla As DataGridView)
+    Sub Consultagenda(ByVal tabla As DataGridView)
         adaptador = New MySqlDataAdapter("SELECT * FROM agenda", conexion)
         Dim data As New DataSet
         adaptador.Fill(data, "agenda")
@@ -49,18 +49,54 @@ Module modulo
 
     End Sub
 
-    Sub consultainventario(ByVal tabla As DataGridView)
+    Sub Consultahistorialyseguimiento(ByVal tabla As DataGridView)
+        adaptador = New MySqlDataAdapter("SELECT * FROM historialyseguimiento", conexion)
+        Dim data As New DataSet
+        adaptador.Fill(data, "historialyseguimiento")
+        tabla.DataSource = data.Tables("historialyseguimiento")
+    End Sub
+
+    Sub Consultainventario(ByVal tabla As DataGridView)
         adaptador = New MySqlDataAdapter("SELECT * FROM inventario", conexion)
         Dim data As New DataSet
         adaptador.Fill(data, "inventario")
         tabla.DataSource = data.Tables("inventario")
     End Sub
 
-    Sub consultafac(ByVal tabla As DataGridView)
+    Sub Consultafac(ByVal tabla As DataGridView)
         adaptador = New MySqlDataAdapter("SELECT * FROM facturacion", conexion)
         Dim data As New DataSet
         adaptador.Fill(data, "facturacion")
         tabla.DataSource = data.Tables("facturacion")
+    End Sub
+
+    'restrinccion a solo numeros
+    Public Sub Solonumeros(ByRef e As System.Windows.Forms.KeyPressEventArgs)
+
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Public Sub Sololetras(ByRef e As System.Windows.Forms.KeyPressEventArgs)
+
+        'SOLO LETRAS'
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
     End Sub
 
 End Module

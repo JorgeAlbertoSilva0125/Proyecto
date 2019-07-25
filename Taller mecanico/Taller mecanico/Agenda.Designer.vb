@@ -26,6 +26,7 @@ Partial Class Agenda
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.id = New System.Windows.Forms.TextBox()
         Me.Calendar = New System.Windows.Forms.DateTimePicker()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -86,6 +87,7 @@ Partial Class Agenda
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.id)
         Me.TabPage1.Controls.Add(Me.Calendar)
         Me.TabPage1.Controls.Add(Me.ListBox1)
         Me.TabPage1.Controls.Add(Me.Label2)
@@ -105,6 +107,14 @@ Partial Class Agenda
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'id
+        '
+        Me.id.Location = New System.Drawing.Point(652, 20)
+        Me.id.Name = "id"
+        Me.id.Size = New System.Drawing.Size(45, 20)
+        Me.id.TabIndex = 44
+        Me.id.Visible = False
         '
         'Calendar
         '
@@ -424,4 +434,5 @@ Partial Class Agenda
     Friend WithEvents Calendar As DateTimePicker
     Friend WithEvents Calendar_Consul As DateTimePicker
     Friend WithEvents Button7 As Button
+    Friend WithEvents id As TextBox
 End Class

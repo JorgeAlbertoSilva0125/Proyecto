@@ -43,6 +43,7 @@ Partial Class Clientes
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.id = New System.Windows.Forms.TextBox()
         Me.Txt11 = New System.Windows.Forms.TextBox()
         Me.Txt10 = New System.Windows.Forms.TextBox()
         Me.Txt9 = New System.Windows.Forms.TextBox()
@@ -241,6 +242,7 @@ Partial Class Clientes
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.id)
         Me.TabPage1.Controls.Add(Me.Txt11)
         Me.TabPage1.Controls.Add(Me.Txt10)
         Me.TabPage1.Controls.Add(Me.Txt9)
@@ -271,6 +273,14 @@ Partial Class Clientes
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generales"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'id
+        '
+        Me.id.Location = New System.Drawing.Point(641, 164)
+        Me.id.Name = "id"
+        Me.id.Size = New System.Drawing.Size(32, 20)
+        Me.id.TabIndex = 37
+        Me.id.Visible = False
         '
         'Txt11
         '
@@ -571,4 +581,5 @@ Partial Class Clientes
     Friend WithEvents Label1 As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents Button6 As Button
+    Friend WithEvents id As TextBox
 End Class

@@ -64,6 +64,7 @@ Partial Class Inventario
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.id = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -186,6 +187,7 @@ Partial Class Inventario
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.id)
         Me.TabPage1.Controls.Add(Me.fecha)
         Me.TabPage1.Controls.Add(Me.Cmb1)
         Me.TabPage1.Controls.Add(Me.Txt9)
@@ -448,6 +450,13 @@ Partial Class Inventario
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'id
+        '
+        Me.id.Location = New System.Drawing.Point(134, 164)
+        Me.id.Name = "id"
+        Me.id.Size = New System.Drawing.Size(43, 20)
+        Me.id.TabIndex = 39
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -519,4 +528,5 @@ Partial Class Inventario
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Button5 As Button
+    Friend WithEvents id As TextBox
 End Class

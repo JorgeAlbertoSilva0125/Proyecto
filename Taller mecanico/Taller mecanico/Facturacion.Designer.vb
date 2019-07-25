@@ -29,12 +29,12 @@ Partial Class Facturacion
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Cbx2 = New System.Windows.Forms.ComboBox()
         Me.fecha = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Txt6 = New System.Windows.Forms.TextBox()
@@ -63,6 +63,7 @@ Partial Class Facturacion
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -72,7 +73,7 @@ Partial Class Facturacion
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.id = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -106,12 +107,12 @@ Partial Class Facturacion
         Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.ListBox1)
         Me.TabPage1.Controls.Add(Me.Cbx2)
         Me.TabPage1.Controls.Add(Me.fecha)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
         Me.TabPage1.Controls.Add(Me.Button9)
-        Me.TabPage1.Controls.Add(Me.Button8)
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.Button6)
         Me.TabPage1.Controls.Add(Me.Txt6)
@@ -163,6 +164,15 @@ Partial Class Facturacion
         Me.DateTimePicker1.TabIndex = 46
         Me.DateTimePicker1.Visible = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(96, 251)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Guardar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
@@ -205,15 +215,6 @@ Partial Class Facturacion
         Me.Button9.TabIndex = 39
         Me.Button9.Text = "Calcular "
         Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(510, 260)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 38
-        Me.Button8.Text = "Imprimir"
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'Button7
         '
@@ -366,6 +367,7 @@ Partial Class Facturacion
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.id)
         Me.TabPage2.Controls.Add(Me.Consultar)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.Label2)
@@ -473,6 +475,15 @@ Partial Class Facturacion
         Me.DataGridView1.Size = New System.Drawing.Size(736, 275)
         Me.DataGridView1.TabIndex = 0
         '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(11, 535)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 38
+        Me.Button8.Text = "Facturar"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.AgendaToolStripMenuItem, Me.InventarioToolStripMenuItem, Me.HistorialYSeguimientoToolStripMenuItem, Me.FacturacionToolStripMenuItem})
@@ -539,14 +550,13 @@ Partial Class Facturacion
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'id
         '
-        Me.Button1.Location = New System.Drawing.Point(10, 535)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Facturar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.id.Location = New System.Drawing.Point(414, 89)
+        Me.id.Name = "id"
+        Me.id.Size = New System.Drawing.Size(47, 20)
+        Me.id.TabIndex = 42
+        Me.id.Visible = False
         '
         'Facturacion
         '
@@ -556,10 +566,10 @@ Partial Class Facturacion
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Button8)
         Me.Name = "Facturacion"
         Me.Text = "Facturacion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -626,4 +636,5 @@ Partial Class Facturacion
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents id As TextBox
 End Class
